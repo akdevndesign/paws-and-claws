@@ -7,6 +7,11 @@ const petsSchema = new Schema({
     unique: false,
     trim: true,
   },
+  animal_type: {
+    type: String,
+    required: true,
+    unique: false,
+  },
   age: {
     type: Number,
     trim: true,
