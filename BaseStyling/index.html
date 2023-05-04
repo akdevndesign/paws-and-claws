@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Paws & Claws</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <section>
+        <nav class="main navbar navbar-expand-lg col-6">
+            <div class="container-fluid">
+                <div class="col-md-6">
+                    PnC
+                </div>
+                <div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <div class="hero">
+            <div class="container-fluid d-flex flex-wrap">
+                <div class="col-md-6 p-3 hero-info text-center">
+                    <h1>Welcome to</h1>
+                    <h1>Paws & Claws!</h1>
+                    <p class="mt-5">Find Your Forever Friend: Unconditional Love Awaits</p>
+                    <button class="btn btn-lg" id="adoptNow">Adopt Now</button>
+                </div>
+                <div class="half col-md-6">
+
+                    <div class="styling styling-max">
+                        <nav class="main navbar navbar-expand">
+                            <div class="container-fluid">
+                                <div>
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                        <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Signup</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Add the input group with the search icon and input field -->
+                                <div class="input-group input-group-search">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-text" style="width: 50px;">
+                                        <span class="bi bi-search search-icon"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="donation">
+                        <button class="btn" id="donate" type="submit">Donate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-showcase">
+        <div class="container col-6 mx-auto text-center">
+            <h2>Fur, scales, claws or paws... </h2>
+            <p>They might start different but they all end in friend</p>
+        </div>
+    </section>
+
+    <!-- Pet Showcase -->
+    <section class="showcase">
+        <div class="container col-8">
+            <div class="row">
+                <div class="justify-content-between mb-4 mt-5">
+                    <div class="pet-header row col-md-6 offset-md-3 justify-content-between align-items-center">
+                        <div class="col-8">
+                            <h3>Pets Available</h3>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn dropdown-toggle" id="dropdown" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Available
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Dogs</a>
+                                <a class="dropdown-item" href="#">Cats</a>
+                                <a class="dropdown-item" href="#">Reptiles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-12 col-md-4 pet-info">
+                    <img src="img/pet1.jpg" alt="">
+                    <p>Name: </p>
+                    <p>Age: </p>
+                </div>
+
+                <div class="col-12 col-md-4 pet-info">
+                    <img src="img/pet2.jpg" alt="">
+                    <p>Name: </p>
+                    <p>Age: </p>
+                </div>
+
+                <div class="col-12 col-md-4 pet-info">
+                    <img src="img/pet3.jpg" alt="">
+                    <p>Name: </p>
+                    <p>Age: </p>
+                </div>
+
+                <div class="col-12 col-md-4 pet-info">
+                    <img src="img/pet4.jpg" alt="">
+                    <p>Name: </p>
+                    <p>Age: </p>
+                </div>
+
+                <div class="col-12 col-md-4 pet-info">
+                    <img src="img/pet5.jpg" alt="">
+                    <p>Name: </p>
+                    <p>Age: </p>
+                </div>
+
+                <div class="col-12 col-md-4 pet-info">
+                    <img src="img/pet6.jpg" alt="">
+                    <p>Name: </p>
+                    <p>Age: </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation">
+
+    </section>
+
+    <!-- Pet Profile -->
+    <section class="pet-profile">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="profile">
+
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="circle-img">
+                                        <img src="img/pet1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="circle-img">
+                                        <img src="img/pet2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="circle-img">
+                                        <img src="img/pet3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3>Name Here</h3>
+                        <p>Age: 4yrs</p>
+                        <p>Incarceration Date</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="bio">
+                        <h3>Biography</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident maiores vel molestias
+                            soluta
+                            optio
+                            quasi nobis ab odit fugit. Consequatur delectus officiis consectetur, vel quas non earum ea
+                            quos
+                            quis.</p>
+                    </div>
+
+                    <div class="levels">
+
+                        <div class="activity">
+                            <h4>Activity Level</h4>
+                            <div class="progress mt-4 mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cuddling">
+                            <h4>Cuddling Level</h4>
+                            <div class="progress mt-4 mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="friendly">
+                            <h4>Friendliness</h4>
+                            <div class="progress mt-4 mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="badges">
+                        <h3>Badges</h3>
+                        <div class="badge">
+                            <img src="img/badge1.jpg" alt="">
+                        </div>
+                        <div class="badge">
+                            <img src="img/badge2.jpg" alt="">
+                        </div>
+                        <div class="badge">
+                            <img src="img/badge3.jpg" alt="">
+                        </div>
+                        <div class="badge">
+                            <img src="img/badge4.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-4 mb-4">
+                <div class="col-md-4 text-center">
+                    <button class="btn btn-lg" id="adoptNow">Adopt Me Now!</button>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- Login Section -->
+    <section class="login account-forms">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6 login-side">
+                    <div class="col-8 mx-auto">
+                        <form class="login-form">
+                            <h1 class="text-center">Paws and Claws</h1>
+                            <h3 class="text-center">Login</h3>
+                            <div class="col-8 mx-auto">
+                                <div class="form-group mt-4 mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="Username">
+                                </div>
+                                <div class="form-group mt-4 mb-4">
+                                    <input type="email" class="form-control cust-form" id="email"
+                                        placeholder="user@email.com">
+                                </div>
+                                <div class="form-group mt-4 mb-4">
+                                    <input type="password" class="form-control cust-form" id="password"
+                                        placeholder="*********">
+                                </div>
+                                <div class="text-center mt-5">
+                                    <button type="submit" class="btn btn-block" id="login-btn">Login</button>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 text-center">Don't have an account? <a href="#">Create one here</a></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="col-8 mx-auto text-center info-side">
+                        <h2>A pet can help reduce stress and improve your mental health!</h2>
+                        <p>Pets, especially dogs and cats, can offer emotional support and become loyal and affectionate
+                            companions, which can improve overall well-being and reduce stress and anxiety levels.
+                            Additionally, pets can encourage owners to be more active, through daily walks and playtime,
+                            which can promote physical health and a sense of routine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Section -->
+    <section class="account-forms">
+        <div class="container-fluid">
+            <div class="row align-items-center signup">
+                <div class="col-10 mx-auto">
+                    <form class="login-form row">
+                        <h1 class="text-center">Paws and Claws</h1>
+                        <div class="col-4 mt-5">
+                            <h3 class="text-center mb-5">Account Information</h3>
+                            <div class="col-8 mx-auto">
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="Username">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="email" class="form-control cust-form" id="email"
+                                        placeholder="user@email.com">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="password" class="form-control cust-form" id="password"
+                                        placeholder="*********">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 mt-5">
+                            <div class="col-8 mx-auto">
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="(999) 555-1111">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="1111 main st, city">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="State, ZIP">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="Pet Experience">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="Other Pets">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 mt-5">
+                            <div class="col-8 mx-auto">
+                                <div class="col-12 mb-4 mt-5">
+                                    <button class="btn col-12 dropdown-toggle" id="dropdown" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Residence type
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">House</a>
+                                        <a class="dropdown-item" href="#">Town House</a>
+                                        <a class="dropdown-item" href="#">Apartment</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <button class="btn col-12 dropdown-toggle mt-1" id="dropdown" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Yard Size
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">0.05 acre</a>
+                                        <a class="dropdown-item" href="#">0.01-0.25 acre</a>
+                                        <a class="dropdown-item" href="#">0.5 acre+</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <button class="btn col-12 dropdown-toggle mt-1" id="dropdown" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Children
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">0</a>
+                                        <a class="dropdown-item" href="#">1-2</a>
+                                        <a class="dropdown-item" href="#">3+</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <button class="btn col-12 dropdown-toggle mt-1" id="dropdown" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Children Ages
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">1-3</a>
+                                        <a class="dropdown-item" href="#">4-8</a>
+                                        <a class="dropdown-item" href="#">9-12</a>
+                                        <a class="dropdown-item" href="#">13+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-block" id="signup-btn">Signup</button>
+                        </div>
+                        <p class="mt-3 mb-0 text-center">Already have an account? <a href="#">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Section -->
+    <section class="admin postition-relative">
+        <div class="container-fluid">
+            <div class="row align-items-center mt-5">
+                <div class="col-11 mx-auto ">
+                    <h3>Admin</h3>
+                </div>
+                <span class="col-1">
+                    <i class="bi bi-envelope"></i>
+                </span>
+            </div>
+            <div class="row justify-content-around mt-5 col-12">
+                <div class="d-flex col-10">
+                    <div class="col-6">
+                        <div class="row admin-item col-10 mb-5 align-items-center">
+                            <div class="col-3">
+                                <img class="post-img" src="#">
+                            </div>
+                            <div class="col-6">
+                                <h4>Arnold</h4>
+                                <p>4 yr Pomeranian</p>
+                            </div>
+                            <div class="col-3">
+                                <p>12/12/2023</p>
+                            </div>
+                        </div>
+                        <div class="row admin-item col-10 mb-5 align-items-center">
+                            <div class="col-3">
+                                <img class="post-img" src="#">
+                            </div>
+                            <div class="col-6">
+                                <h4>Arnold</h4>
+                                <p>4 yr Pomeranian</p>
+                            </div>
+                            <div class="col-3">
+                                <p>12/12/2023</p>
+                            </div>
+                        </div>
+                        <div class="row admin-item col-10 mb-5 align-items-center">
+                            <div class="col-3">
+                                <img class="post-img" src="#">
+                            </div>
+                            <div class="col-6">
+                                <h4>Arnold</h4>
+                                <p>4 yr Pomeranian</p>
+                            </div>
+                            <div class="col-3">
+                                <p>12/12/2023</p>
+                            </div>
+                        </div>
+                        <div class="row admin-item col-10 mb-5 align-items-center">
+                            <div class="col-3">
+                                <img class="post-img" src="#">
+                            </div>
+                            <div class="col-6">
+                                <h4>Arnold</h4>
+                                <p>4 yr Pomeranian</p>
+                            </div>
+                            <div class="col-3">
+                                <p>12/12/2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row admin-item col-10 mb-5 align-items-center">
+                            <div class="col-3">
+                                <img class="post-img" src="#">
+                            </div>
+                            <div class="col-6">
+                                <h4>Arnold</h4>
+                                <p>4 yr Pomeranian</p>
+                            </div>
+                            <div class="col-3">
+                                <p>12/12/2023</p>
+                            </div>
+                        </div>
+                        <div class="row admin-item col-10 mb-5 align-items-center">
+                            <div class="col-3">
+                                <img class="post-img" src="#">
+                            </div>
+                            <div class="col-6">
+                                <h4>Arnold</h4>
+                                <p>4 yr Pomeranian</p>
+                            </div>
+                            <div class="col-3">
+                                <p>12/12/2023</p>
+                            </div>
+                        </div>
+                        <div class="row admin-item col-10 mb-5 align-items-center">
+                            <div class="col-3">
+                                <img class="post-img" src="#">
+                            </div>
+                            <div class="col-6">
+                                <h4>Arnold</h4>
+                                <p>4 yr Pomeranian</p>
+                            </div>
+                            <div class="col-3">
+                                <p>12/12/2023</p>
+                            </div>
+                        </div>
+                        <div class="row admin-item col-10 mb-5 align-items-center">
+                            <div class="col-3">
+                                <img class="post-img" src="#">
+                            </div>
+                            <div class="col-6">
+                                <h4>Arnold</h4>
+                                <p>4 yr Pomeranian</p>
+                            </div>
+                            <div class="col-3">
+                                <p>12/12/2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button type="submit" class="btn btn-block" id="new-post">New Post+</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Admin Create Post -->
+    <section class="admin-post">
+        <div class="container-fluid">
+            <div class="row align-items-center signup">
+                <div class="col-8 mx-auto">
+                    <form class="login-form row">
+                        <h1 class="text-center">Admin Post</h1>
+                        <h3 class="text-center mb-5">New Adoptee</h3>
+                        <div class="col-6 mt-5">
+                            <div class="col-8 mx-auto">
+                                <div class="col-12 mb-4 mt-5">
+                                    <button class="btn col-12 dropdown-toggle" id="dropdown" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Pet Type
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Dog</a>
+                                        <a class="dropdown-item" href="#">Cat</a>
+                                        <a class="dropdown-item" href="#">Reptile</a>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="name" placeholder="Name">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="age" placeholder="4 yrs">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 mt-5">
+                            <div class="col-8 mx-auto">
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="Upload img">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="Activity Level (0-10)">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="Cuddliness (0-10)">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="Friendliness (0-10)">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input type="text" class="form-control cust-form" id="username"
+                                        placeholder="Health History">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-block m-2" id="submit-post">Submit</button>
+                            <button type="submit" class="btn btn-block m-2" id="cancel-post">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+
+    <footer class="bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mt-4 mb-4">
+                    <h4>Join Our Newsletter</h4>
+                    <form>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="email" class="form-control" placeholder="Enter your email address">
+                            </div>
+                            <div class="col-auto mt-4">
+                                <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-md-4">
+                    <h5>Paws &amp; Claws</h5>
+                    <p>&copy; 2023 Paws &amp; Claws</p>
+                    <a href="#"><i class="fab fa-github fa-lg"></i></a>
+                </div>
+                <div class="col-md-4">
+                    <h5>About</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="btn btn-outline-dark btn-sm float-right mb-3">
+                        <i class="bi bi-caret-up-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
