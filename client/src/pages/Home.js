@@ -1,4 +1,5 @@
 import "../styles/styles.css";
+import { Link } from "react-router-dom";
 import {
   Container,
   Row,
@@ -78,32 +79,62 @@ export default function Home() {
           </Row>
           <Row className="mt-5 pt-5 col-8 mx-auto" style={{ display: "grid", gridTemplateAreas: "'pet1 pet2 pet3' 'pet4 pet5 pet6'" }}>
             <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet1" }}>
-              <img src="img/pet1.jpg" alt="" />
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet1.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
             <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet2" }}>
-              <img src="img/pet2.jpg" alt="" />
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet2.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
             <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet3" }}>
-              <img src="img/pet3.jpg" alt="" />
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet3.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
             <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet4" }}>
-              <img src="img/pet4.jpg" alt="" />
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet4.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
             <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet5" }}>
-              <img src="img/pet5.jpg" alt="" />
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet5.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
             <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet6" }}>
-              <img src="img/pet6.jpg" alt="" />
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet6.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>

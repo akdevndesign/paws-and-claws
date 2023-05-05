@@ -102,6 +102,7 @@ html, body {
 /* ---------------Section for the showcase--------------- */
 .showcase {
     background-color: var(--color-3);
+    height: 90vh;
 }
 
 /* Pet Header */
@@ -145,11 +146,15 @@ html, body {
 
 /* ---------------Pet Profile--------------- */
 .pet-profile {
-    margin-top: 50px;
+    height: 100vh;
 }
 
 .bio {
     margin-top: 50px;
+}
+
+.profile {
+    padding-top: 20vh;
 }
 
 /* courasel */
@@ -160,7 +165,7 @@ html, body {
     background: var(--color-5);
 }
 
-.profile {
+.profile-img {
     width: 500px;
 }
 
