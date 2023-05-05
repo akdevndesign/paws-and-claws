@@ -1,0 +1,292 @@
+:root {
+    --color-1: #FF69B4;
+    --color-2: #7DF9FF;
+    --color-3: #E6E6FA;
+    --color-4: #FADADD;
+    --color-5: #B6D0E2;
+    --color-6: #FFD639;
+    --color-7: #274C77;
+    --white: #FFF;
+    --black: #222;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: white;
+}
+
+/*  ---------------TOP Section--------------- */
+section {
+    position: relative;
+}
+
+.main {
+    position: absolute;
+}
+
+.hero {
+    margin-bottom: 100px;
+}
+
+.hero-info {
+    margin-top: 225px;
+}
+
+.hero-info h1 {
+    font-size: 400%;
+}
+
+.hero-info p {
+    font-size: 150%;
+}
+
+.hero-info h1,
+.hero-info p {
+    color: var(--color-7);
+    text-shadow: 3px 3px 6px #2222;
+}
+
+/* Styling box is the one with the cool gradient */
+.styling {
+    background: radial-gradient(ellipse at top right, var(--color-1), var(--color-2) 90%);
+    width: 80%;
+    height: 800px;
+    border-radius: 0 0 0 200px;
+}
+
+.styling-max {
+    max-width: 444px;
+}
+
+/* Define a CSS class for the search icon */
+.search-icon {
+    font-size: 1.2rem;
+}
+
+/* Define a CSS class for the input group */
+.input-group-search {
+    height: 38px;
+}
+
+.half {
+    width: 555px;
+    position: relative;
+}
+
+.half-max {
+    max-width: 555px;
+}
+
+.donation {
+    position: absolute;
+    top: 10px;
+    right: 10px
+}
+
+/*  ---------------Transition--------------- */
+.hero-showcase {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--color-5);
+    color: var(--color-7);
+    text-shadow: 3px 3px 6px #2222;
+}
+
+/* ---------------Section for the showcase--------------- */
+.showcase {
+    background-color: var(--color-3);
+}
+
+/* Pet Header */
+.pet-header {
+    background-color: var(--color-7);
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    color: var(--white);
+}
+
+.dropdown {
+    margin-top: 20px;
+}
+
+.dropdown h4 {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+/* Pet Info cards */
+
+.pet-info {
+
+    margin-bottom: 30px;
+}
+
+.pet-info img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.pet-info img {
+    height: 250px;
+    background: var(--color-4);
+    border-radius: 125px;
+}
+
+.text-left {
+    width: 250px;
+    text-align: left;
+}
+
+/* ---------------Pet Profile--------------- */
+.pet-profile {
+    margin-top: 50px;
+}
+
+.bio {
+    margin-top: 50px;
+}
+
+/* courasel */
+.circle-img {
+    height: 500px;
+    width: 500px;
+    border-radius: 250px;
+    background: var(--color-5);
+}
+
+.profile {
+    width: 500px;
+}
+
+/* Badges */
+.badge {
+    width: 50px;
+    height: 50px;
+    background: var(--color-4);
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+/* Progress Bars */
+.progress {
+    height: 40px;
+    border-radius: 20px;
+}
+
+/* ---------------Login Section--------------- */
+.account-forms {
+    background-color: var(--color-7);
+    height: 900px;
+}
+
+.login-side {
+    padding-top: 200px;
+    background-color: var(--color-5);
+    height: 900px;
+}
+
+.login-form {
+    background-color: var(--color-3);
+    box-shadow: 3px 3px 6px var(--color-7);
+    padding: 20px;
+    color: var(--color-7);
+}
+
+.login-form h1 {
+    text-shadow: 3px 3px 6px #2222;
+}
+
+.info-side {
+    color: var(--white);
+}
+
+.info-side h2 {
+    margin-bottom: 40px;
+}
+
+/* ---------------Login Section--------------- */
+.signup {
+    height: 900px;
+    background-color: var(--color-5);
+}
+
+/* input */
+.cust-form {
+    border-radius: 0px;
+    background-color: var(--color-3);
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+/* ---------------Admin View Section--------------- */
+.admin {
+    height: 900px;
+    color: var(--color-7);
+}
+
+.admin h3 {
+    text-shadow: 3px 3px 6px #2222;
+    margin-left: 100px;
+}
+
+#new-post {
+    width: 250px;
+}
+
+.bi-envelope {
+    font-size: 2rem;
+}
+
+.post-img {
+    margin-left: -12px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: var(--color-4);
+}
+
+.admin-item {
+    background-color: var(--color-5);
+    border-radius: 50px;
+}
+
+/* Button Styling */
+
+.btn {
+    background: var(--color-2);
+    border: none;
+    color: var(--black);
+    border-radius: 20px;
+    padding: 5px 15px 5px 15px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: var(--color-1);
+}
+
+#donate:focus,
+#donate:active,
+#dropdown:focus,
+#dropdown:active,
+#adoptNow:focus,
+#adoptNow:active {
+    background-color: var(--color-1);
+}
+
+#adoptNow {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#login-btn {
+    width: 200px;
+}
