@@ -14,8 +14,10 @@
     margin: 0;
 }
 
-body {
+html, body {
     background-color: white;
+    height: 100%;
+    margin: 0;
 }
 
 /*  ---------------TOP Section--------------- */
@@ -30,7 +32,7 @@ body {
 }
 
 .hero {
-    margin-bottom: 100px;
+    height: 90vh;
 }
 
 .hero-info {
@@ -54,8 +56,8 @@ body {
 /* Styling box is the one with the cool gradient */
 .styling {
     background: radial-gradient(ellipse at top right, var(--color-1), var(--color-2) 90%);
-    width: 80%;
-    height: 800px;
+    width: 90%;
+    height:80vh;
     border-radius: 0 0 0 200px;
 }
 
@@ -85,7 +87,7 @@ body {
 .donation {
     position: absolute;
     top: 10px;
-    right: 10px
+    right: -20px;
 }
 
 /*  ---------------Transition--------------- */
@@ -124,18 +126,13 @@ body {
 /* Pet Info cards */
 
 .pet-info {
-
     margin-bottom: 30px;
 }
 
 .pet-info img {
     width: 100%;
     max-width: 250px;
-    height: auto;
     margin-bottom: 10px;
-}
-
-.pet-info img {
     height: 250px;
     background: var(--color-4);
     border-radius: 125px;
@@ -185,13 +182,12 @@ body {
 /* ---------------Login Section--------------- */
 .account-forms {
     background-color: var(--color-7);
-    height: 900px;
 }
 
 .login-side {
-    padding-top: 200px;
+    padding-top: 30vh;
     background-color: var(--color-5);
-    height: 900px;
+    height: 100vh;
 }
 
 .login-form {
