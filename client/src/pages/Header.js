@@ -1,61 +1,58 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../styles/styles.css";
-import Navigation from "./Navigation";
 
 export default function Header() {
-  const [navPage, setPage] = useState("home");
-  const handleClick = (event) => {
-    setPage(event.target.getAttribute("id"));
-  };
+  const [onHome, setOnHome] = useState(true);
   return (
-    <>
+    <section className="main-header">
       <nav className="main navbar navbar-expand-lg col-6">
         <div className="container-fluid">
-          <div className="col-md-6" id="home" onClick={handleClick}>
+          <Link className="col-md-4" to={"/"} onClick={() => setOnHome(true)}>
             PnC
-          </div>
+          </Link>
           <div>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link"
-                  href="#"
-                  id="about"
-                  onClick={handleClick}
+                  to={"/about"}
+                  onClick={() => setOnHome(false)}
                 >
                   About
-                </a>
+                </Link>
               </li>
+              {onHome ? (
+                <li className="nav-item">
+                  <a className="nav-link" href="#showcase">
+                    Our Pets
+                  </a>
+                </li>
+              ) : (
+                <></>
+              )}
               <li className="nav-item">
-                <a className="nav-link" href="#showcase">
-                  Our Pets
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
+                <Link
                   className="nav-link"
-                  href="#"
-                  id="contact"
-                  onClick={handleClick}
+                  to={"/contact"}
+                  onClick={() => setOnHome(false)}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link"
-                  href="#"
-                  id="account"
-                  onClick={handleClick}
+                  to={"/account"}
+                  onClick={() => setOnHome(false)}
                 >
                   Account
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      {/* <Navigation onPage={navPage} /> */}
-    </>
+    </section>
   );
 }
