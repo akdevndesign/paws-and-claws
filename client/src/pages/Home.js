@@ -44,11 +44,6 @@ export default function Home() {
               </Container>
             </Navbar>
           </div>
-          <div className="donation">
-            <Button id="donate" type="submit" className="text-right">
-              Donate
-            </Button>
-          </div>
         </Col>
       </Container>
       <section className="hero-showcase" id="showcase">

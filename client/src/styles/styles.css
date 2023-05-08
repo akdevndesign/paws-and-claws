@@ -87,7 +87,7 @@ html, body {
 .donation {
     position: absolute;
     top: 10px;
-    right: -20px;
+    right: 20px;
 }
 
 /*  ---------------Transition--------------- */
@@ -216,7 +216,7 @@ html, body {
 
 /* ---------------Login Section--------------- */
 .signup {
-    height: 900px;
+    height: 100vh;
     background-color: var(--color-5);
 }
 
