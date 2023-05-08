@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Account from "./pages/Account";
+import PetProfile from "./pages/PetProfile";
 import { Routes, Route, Outlet } from "react-router-dom";
 import "./styles/styles.css";
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="account" element={<Account />} />
+        <Route path="petProfile" element={<PetProfile />} />
       </Routes>
       <Header />
       <Outlet />

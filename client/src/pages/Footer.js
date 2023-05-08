@@ -2,14 +2,14 @@ import "../styles/styles.css";
 
 export default function Footer() {
   return (
-    <footer className="bg-light">
-      <div className="container">
+    <footer className="bg-light pt-4">
+      <div className="container pt-4">
         <div className="row justify-content-center">
-          <div className="col-md-6 text-center mt-4 mb-4">
+          <div className="col-md-6 text-center mt-4">
             <h4>Join Our Newsletter</h4>
             <form>
               <div className="form-row">
-                <div className="col">
+                <div className="col-6 mx-auto">
                   <input
                     type="email"
                     className="form-control"
@@ -25,7 +25,7 @@ export default function Footer() {
             </form>
           </div>
         </div>
-        <div className="row justify-content-center mb-5 text-center">
+        <div className="row justify-content-center pb-3 text-center">
           <div className="col-md-4">
             <h5>Paws &amp; Claws</h5>
             <p>&copy; 2023 Paws &amp; Claws</p>

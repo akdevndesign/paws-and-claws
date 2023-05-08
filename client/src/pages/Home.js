@@ -1,4 +1,5 @@
 import "../styles/styles.css";
+import { Link } from "react-router-dom";
 import {
   Container,
   Row,
@@ -18,9 +19,9 @@ import {
 
 export default function Home() {
   return (
-    <div className="hero">
-      <Container fluid className="d-flex flex-wrap">
-        <Col md={6} className="p-3 hero-info text-center">
+    <div>
+      <Container fluid className="d-flex flex-wrap hero">
+        <Col md={7} className="p-3 hero-info text-center">
           <h1>Welcome to</h1>
           <h1>Paws &amp; Claws!</h1>
           <p className="mt-5">
@@ -30,7 +31,7 @@ export default function Home() {
             Adopt Now
           </Button>
         </Col>
-        <Col md={6} className="half">
+        <Col md={4} className="half">
           <div className="styling styling-max">
             <Navbar expand="lg" className="main">
               <Container fluid>
@@ -44,7 +45,7 @@ export default function Home() {
             </Navbar>
           </div>
           <div className="donation">
-            <Button id="donate" type="submit">
+            <Button id="donate" type="submit" className="text-right">
               Donate
             </Button>
           </div>
@@ -57,16 +58,16 @@ export default function Home() {
         </Container>
       </section>
       <section className="showcase">
-        <Container>
-          <Row className="justify-content-between mb-4 mt-5">
-            <Col md="6" className="d-flex align-items-center">
+        <Container className="pt-5 pb-5">
+          <Row className="pet-header justify-content-between mt-5 mb-5 col-6 mx-auto">
+            <Col className="d-flex align-items-center mx-auto">
               <h3 className="mb-0">Pets Available</h3>
             </Col>
             <Col
               md="6"
               className="d-flex justify-content-end align-items-center"
             >
-              <ButtonDropdown isOpen={false} toggle={() => {}}>
+              <ButtonDropdown isOpen={false} toggle={() => { }}>
                 <DropdownToggle caret>Available</DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>Dogs</DropdownItem>
@@ -76,38 +77,69 @@ export default function Home() {
               </ButtonDropdown>
             </Col>
           </Row>
-          <Row>
-            <Col xs="12" md="4" className="pet-info">
-              <img src="img/pet1.jpg" alt="" />
+          <Row className="mt-5 pt-5 col-8 mx-auto" style={{ display: "grid", gridTemplateAreas: "'pet1 pet2 pet3' 'pet4 pet5 pet6'" }}>
+            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet1" }}>
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet1.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
-            <Col xs="12" md="4" className="pet-info">
-              <img src="img/pet2.jpg" alt="" />
+            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet2" }}>
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet2.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
-            <Col xs="12" md="4" className="pet-info">
-              <img src="img/pet3.jpg" alt="" />
+            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet3" }}>
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet3.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
-            <Col xs="12" md="4" className="pet-info">
-              <img src="img/pet4.jpg" alt="" />
+            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet4" }}>
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet4.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
-            <Col xs="12" md="4" className="pet-info">
-              <img src="img/pet5.jpg" alt="" />
+            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet5" }}>
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet5.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
-            <Col xs="12" md="4" className="pet-info">
-              <img src="img/pet6.jpg" alt="" />
+            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet6" }}>
+              <Link
+                className="nav-link"
+                to={"/petProfile"}
+              >
+                <img src="img/pet6.jpg" alt="" />
+              </Link>
               <p>Name:</p>
               <p>Age:</p>
             </Col>
           </Row>
+
         </Container>
       </section>
     </div>
