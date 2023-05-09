@@ -98,6 +98,7 @@ section {
 /* ---------------Section for the showcase--------------- */
 .showcase {
     background-color: var(--color-3);
+    height: 90vh;
 }
 
 /* Pet Header */
