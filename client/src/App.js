@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Account from "./pages/Account";
 import PetProfile from "./pages/PetProfile";
 import Login from "./pages/Login";
+import Admin from "./pages/Admin";
 import { Routes, Route, Outlet } from "react-router-dom";
 import "./styles/styles.css";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="account" element={<Account />} />
         <Route path="petProfile" element={<PetProfile />} />
         <Route path="login" element={<Login />} />
+        <Route path="admin" element={<Admin />} />
       </Routes>
       <Header />
       <Outlet />
