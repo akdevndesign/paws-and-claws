@@ -14,5 +14,8 @@
     "license": "MIT License",
     "devDependencies": {
       "concurrently": "^5.3.0"
-    }
+    },
+        "dependencies": {
+      "apollo-server": "^3.6.2"
+  }
   }
