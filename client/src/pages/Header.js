@@ -9,7 +9,7 @@ export default function Header() {
     <section className="main-header">
       <nav className="main navbar navbar-expand-lg col-12">
         <div className="container-fluid">
-          <Link className="col-md-4" to={"/"} onClick={() => setOnHome(true)}>
+          <Link className="col-md-5" to={"/"} onClick={() => setOnHome(true)}>
             PnC
           </Link>
           <div className="col-md-8">
@@ -32,15 +32,6 @@ export default function Header() {
               ) : (
                 <></>
               )}
-              <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  to={"/contact"}
-                  onClick={() => setOnHome(false)}
-                >
-                  Contact
-                </Link>
-              </li>
               <li className="nav-item">
                 <Link
                   className="nav-link"
