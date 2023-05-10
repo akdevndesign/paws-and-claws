@@ -76,7 +76,7 @@ export default function PetProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="row justify-content-center pt-5">
+                <div className="row justify-content-center">
                     <div className="col-md-4 text-center pt-5">
                         <button className="btn btn-lg" id="adoptNow">Adopt Me Now!</button>
                     </div>
