@@ -1,13 +1,11 @@
 :root {
-    --color-1: #FF69B4;
-    --color-2: #7DF9FF;
-    --color-3: #E6E6FA;
-    --color-4: #FADADD;
-    --color-5: #B6D0E2;
-    --color-6: #FFD639;
-    --color-7: #274C77;
     --white: #FFF;
     --black: #222;
+    --cream: #f6ebe1;
+    --orange: #d25632;
+    --teal: #086c74;
+    --tomato:#F06543;
+    --light-teal:#b7e0d5;
 }
 
 * {
@@ -33,6 +31,8 @@ html, body {
 
 .hero {
     height: 90vh;
+    margin: 0;
+    padding: 0;
 }
 
 .hero-info {
@@ -49,7 +49,7 @@ html, body {
 
 .hero-info h1,
 .hero-info p {
-    color: var(--color-7);
+    color: var(--teal);
     text-shadow: 3px 3px 6px #2222;
 }
 
@@ -75,39 +75,41 @@ html, body {
     height: 38px;
 }
 
-.half {
-    width: 555px;
-    position: relative;
-}
-
-.half-max {
-    max-width: 555px;
-}
-
 .donation {
     position: absolute;
     top: 10px;
     right: 20px;
 }
 
+/*  -----------------------------  */
+
+.header-image{
+    height: 90vh;
+    background-size:cover;
+    background-image: 
+    /* url(https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ); */
+    url(https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1683746802/karsten-winegeart-oU6KZTXhuvk-unsplash_ynehrf.jpg);
+    background-position: right 50% bottom 0px;
+}
+
 /*  ---------------Transition--------------- */
 .hero-showcase {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: var(--color-5);
-    color: var(--color-7);
+    background-color: var(--orange);
+    color: var(--white);
     text-shadow: 3px 3px 6px #2222;
 }
 
 /* ---------------Section for the showcase--------------- */
 .showcase {
-    background-color: var(--color-3);
+    background-color: var(--cream);
     height: 90vh;
 }
 
 /* Pet Header */
 .pet-header {
-    background-color: var(--color-7);
+    background-color: var(--teal);
     padding: 20px;
     border-radius: 30px;
     margin-bottom: 30px;
@@ -186,20 +188,20 @@ html, body {
 
 /* ---------------Login Section--------------- */
 .account-forms {
-    background-color: var(--color-7);
+    background-color: var(--orange);
 }
 
 .login-side {
     padding-top: 30vh;
-    background-color: var(--color-5);
+    background-color: var(--cream);
     height: 100vh;
 }
 
 .login-form {
-    background-color: var(--color-3);
+    background-color: var(--teal);
     box-shadow: 3px 3px 6px var(--color-7);
     padding: 20px;
-    color: var(--color-7);
+    color: var(--white);
 }
 
 .login-form h1 {
@@ -214,10 +216,14 @@ html, body {
     margin-bottom: 40px;
 }
 
+a {
+    color: var(--light-teal);
+}
+
 /* ---------------Login Section--------------- */
 .signup {
     height: 100vh;
-    background-color: var(--color-5);
+    background-color: var(--cream);
 }
 
 /* input */
@@ -232,7 +238,7 @@ html, body {
 /* ---------------Admin View Section--------------- */
 .admin {
     height: 100vh;
-    color: var(--color-7);
+    color: var(--orange);
 }
 
 .admin h3 {
@@ -260,23 +266,24 @@ html, body {
 }
 
 .admin-item {
-    background-color: var(--color-5);
-    box-shadow: 3px 3px 6px var(--color-7);
+    background-color: var(--cream);
+    box-shadow: 2px 2px 6px #222;
 }
 
 /* Button Styling */
 
 .btn {
-    background: var(--color-2);
+    background: var(--orange);
     border: none;
-    color: var(--black);
+    color: var(--white);
     border-radius: 20px;
     padding: 5px 15px 5px 15px;
     transition: 0.5s;
 }
 
 .btn:hover {
-    background-color: var(--color-1);
+    background-color: var(--tomato);
+    box-shadow: 2px 2px 6px var(--tomato);
 }
 
 #donate:focus,
@@ -285,7 +292,7 @@ html, body {
 #dropdown:active,
 #adoptNow:focus,
 #adoptNow:active {
-    background-color: var(--color-1);
+    background-color: var(--tomato);
 }
 
 #adoptNow {
@@ -300,4 +307,9 @@ html, body {
 .cust-trash {
     color: red;
     font-size: 150%;
+}
+
+/* Footer */
+footer {
+    background-color: white;
 }

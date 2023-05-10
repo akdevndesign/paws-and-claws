@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {Button} from 'react-bootstrap';
+import { Button, InputGroup, FormControl } from 'react-bootstrap';
 import "../styles/styles.css";
 
 export default function Header() {
@@ -9,10 +9,10 @@ export default function Header() {
     <section className="main-header">
       <nav className="main navbar navbar-expand-lg col-12">
         <div className="container-fluid">
-          <Link className="col-md-5" to={"/"} onClick={() => setOnHome(true)}>
-            PnC
+          <Link className="col-3" to={"/"} onClick={() => setOnHome(true)}>
+            Paws and Claws
           </Link>
-          <div className="col-md-8">
+          <div className="col-3">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link
@@ -32,18 +32,21 @@ export default function Header() {
               ) : (
                 <></>
               )}
-              <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  to={"/account"}
-                  onClick={() => setOnHome(false)}
-                >
-                  Account
-                </Link>
-              </li>
             </ul>
           </div>
-          <div className="donation">
+          <div className="col-md-2 col-sm-3">
+            {/* {onHome ? (
+              <InputGroup className="input-group-search">
+              <FormControl type="text" placeholder="Search..." />
+              <InputGroup.Text style={{ width: "50px" }}>
+                <span className="bi bi-search search-icon"></span>
+              </InputGroup.Text>
+            </InputGroup>
+            ) : (
+              <></>
+            )            } */}
+          </div>
+          <div className="col-1">
             <Button id="donate" type="submit" className="text-right">
               Donate
             </Button>
