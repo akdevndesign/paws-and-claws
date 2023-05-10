@@ -1,0 +1,34 @@
+[{
+    "name": "Fluffy",
+    "animal_type": "Dog",
+    "age": 3,
+    "image_url": "https://example.com/fluffy.jpg",
+    "bio": "I am a very friendly dog.",
+    "activity_level": 7,
+    "cuddliness_level": 9,
+    "friendliness_level": 10,
+    "health_history": "None"
+  },
+  {
+    "name": "Smokey",
+    "animal_type": "Cat",
+    "age": 5,
+    "image_url": "https://example.com/smokey.jpg",
+    "bio": "I am a very independent cat.",
+    "activity_level": 5,
+    "cuddliness_level": 3,
+    "friendliness_level": 6,
+    "health_history": "None"
+  },
+  {
+    "name": "Lizzy",
+    "animal_type": "Reptile",
+    "age": 2,
+    "image_url": "https://example.com/lizzy.jpg",
+    "bio": "I am a leopard gecko. I like to eat crickets.",
+    "activity_level": 2,
+    "cuddliness_level": 1,
+    "friendliness_level": 5,
+    "health_history": "None"
+  }
+  ]

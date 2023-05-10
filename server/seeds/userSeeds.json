@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Alice",
+      "email": "alice@example.com",
+      "password": "password",
+      "phone_number": "1234567890",
+      "home_type": "House",
+      "pet_experience": 5,
+      "other_pets": "Yes",
+      "other_pet_types": "Cat"
+    },
+    {
+      "name": "Bob",
+      "email": "bob@example.com",
+      "password": "password",
+      "phone_number": "2345678901",
+      "home_type": "Apartment",
+      "pet_experience": 3,
+      "other_pets": "No",
+      "other_pet_types": ""
+    },
+    {
+      "name": "Charlie",
+      "email": "charlie@example.com",
+      "password": "password",
+      "phone_number": "3456789012",
+      "home_type": "Condo",
+      "pet_experience": 1,
+      "other_pets": "Yes",
+      "other_pet_types": "Dog"
+    }
+  ]
