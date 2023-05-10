@@ -42,12 +42,11 @@ const resolvers = {
         other_pets,
         other_pet_types,
       });
+      const token = signToken(user);
+
       await user.save();
       return {
-        userId: user.id,
-        token: 'dummy-token', // Replace with actual token generation logic
-        tokenExpiration: 1, // Replace with actual token generation logic
-      };
+        userId: user.id,};
     },
     deleteUser: async (_, { id }) => {
       const user = await User.findByIdAndDelete(id);

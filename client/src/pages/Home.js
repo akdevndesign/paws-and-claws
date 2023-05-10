@@ -16,8 +16,16 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
+import { useQuery } from "@apollo/client";
+import { QUERY_PROFILES } from "../utils/queries";
 
 export default function Home() {
+  const { data } = useQuery(QUERY_PROFILES);
+  const getPets = data?.getPets || [];
+
+  console.log("getPets: ", getPets);
+  console.log("data :", data);
+
   return (
     <div>
       <Container fluid className="d-flex flex-wrap hero">
@@ -67,7 +75,7 @@ export default function Home() {
               md="6"
               className="d-flex justify-content-end align-items-center"
             >
-              <ButtonDropdown isOpen={false} toggle={() => { }}>
+              <ButtonDropdown isOpen={false} toggle={() => {}}>
                 <DropdownToggle caret>Available</DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>Dogs</DropdownItem>
@@ -77,69 +85,31 @@ export default function Home() {
               </ButtonDropdown>
             </Col>
           </Row>
-          <Row className="mt-5 pt-5 col-8 mx-auto" style={{ display: "grid", gridTemplateAreas: "'pet1 pet2 pet3' 'pet4 pet5 pet6'" }}>
-            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet1" }}>
-              <Link
-                className="nav-link"
-                to={"/petProfile"}
-              >
-                <img src="img/pet1.jpg" alt="" />
-              </Link>
-              <p>Name:</p>
-              <p>Age:</p>
-            </Col>
-            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet2" }}>
-              <Link
-                className="nav-link"
-                to={"/petProfile"}
-              >
-                <img src="img/pet2.jpg" alt="" />
-              </Link>
-              <p>Name:</p>
-              <p>Age:</p>
-            </Col>
-            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet3" }}>
-              <Link
-                className="nav-link"
-                to={"/petProfile"}
-              >
-                <img src="img/pet3.jpg" alt="" />
-              </Link>
-              <p>Name:</p>
-              <p>Age:</p>
-            </Col>
-            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet4" }}>
-              <Link
-                className="nav-link"
-                to={"/petProfile"}
-              >
-                <img src="img/pet4.jpg" alt="" />
-              </Link>
-              <p>Name:</p>
-              <p>Age:</p>
-            </Col>
-            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet5" }}>
-              <Link
-                className="nav-link"
-                to={"/petProfile"}
-              >
-                <img src="img/pet5.jpg" alt="" />
-              </Link>
-              <p>Name:</p>
-              <p>Age:</p>
-            </Col>
-            <Col xs="12" md="12" className="pet-info" style={{ gridArea: "pet6" }}>
-              <Link
-                className="nav-link"
-                to={"/petProfile"}
-              >
-                <img src="img/pet6.jpg" alt="" />
-              </Link>
-              <p>Name:</p>
-              <p>Age:</p>
-            </Col>
+          <Row
+            className="mt-5 pt-5 col-8 mx-auto"
+            style={{
+              display: "grid",
+              gridTemplateAreas: "'pet1 pet2 pet3''pet4 pet5 pet6'",
+            }}
+          >
+            {getPets.map((pet, i) => {
+              return (
+                <Col
+                  xs="12"
+                  md="12"
+                  className="pet-info"
+                  style={{ gridArea: `pet${i + 1}`}}
+                  key= {i}
+                >
+                  <Link className="nav-link" to={"/petProfile"}>
+                    <img src={pet.image_url} alt="" />
+                  </Link>git
+                  <p>Name: {pet.name}</p>
+                  <p>Age:{pet.age}</p>
+                </Col>
+              );
+            })}
           </Row>
-
         </Container>
       </section>
     </div>
