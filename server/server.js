@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
   typeDefs,
-  resolvers,
+  resolvers
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -39,4 +39,4 @@ const startApolloServer = async (typeDefs, resolvers) => {
   
 // Call the async function to start the server
   startApolloServer(typeDefs, resolvers);
-
+  
