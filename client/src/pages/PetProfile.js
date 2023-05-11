@@ -7,23 +7,9 @@ export default function PetProfile() {
                 <div className="row profile">
                     <div className="col-md-6">
                         <div className="profile-img">
-                            <Carousel id="carouselExampleControls" interval={null} controls={false}>
-                                <Carousel.Item>
-                                    <div className="circle-img">
-                                        <img src="img/pet1.jpg" alt="" />
-                                    </div>
-                                </Carousel.Item>
-                                <Carousel.Item>
-                                    <div className="circle-img">
-                                        <img src="img/pet2.jpg" alt="" />
-                                    </div>
-                                </Carousel.Item>
-                                <Carousel.Item>
-                                    <div className="circle-img">
-                                        <img src="img/pet3.jpg" alt="" />
-                                    </div>
-                                </Carousel.Item>
-                            </Carousel>
+                            <div className="circle-img">
+                                <img src="img/pet1.jpg" alt="" />
+                            </div>
                         </div>
                         <div className="mt-5">
                             <h3>Name Here</h3>

@@ -1,5 +1,4 @@
 import "../styles/styles.css";
-import { Link } from "react-router-dom";
 import {
   Container,
   Row,
@@ -9,6 +8,8 @@ import {
 } from "react-bootstrap";
 import { useQuery } from "@apollo/client";
 import { QUERY_PROFILES } from "../utils/queries";
+import PetInfo from '../components/petInfo';
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const { data } = useQuery(QUERY_PROFILES);
@@ -21,8 +22,9 @@ export default function Home() {
     <div>
       <Container fluid className="d-flex flex-wrap hero jumbotron jumbotron-fluid bg-lightblue position-relative">
         <Col md={6} className="p-3 hero-info text-center tofront">
-          <h1>Welcome to</h1>
-          <h1>Paws &amp; Claws!</h1>
+          <Link>
+            <img src="https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_3_kyhwbh.png" alt="Paws and Claws" className="hero-img"></img>
+          </Link>
           <p className="mt-5">
             Find Your Forever Friend: Unconditional Love Awaits
           </p>
@@ -40,8 +42,8 @@ export default function Home() {
       </section>
 
       <section className="showcase">
-        <Container className="pt-5 pb-5">
-          <Row className="pet-header justify-content-between mt-5 mb-5 col-6 mx-auto">
+        <Container fluid className="pt-5 pb-5 parent-container">
+          <Row className="pet-header justify-content-between mt-5 mb-5 col-sm-8 col-md-6 col-lg-4 mx-auto">
             <Col className="d-flex align-items-center mx-auto">
               <h3 className="mb-0">Pets Available</h3>
             </Col>
@@ -49,35 +51,19 @@ export default function Home() {
               md="6"
               className="d-flex justify-content-end align-items-center"
             >
-           <ButtonGroup className="d-flex justify-content-between">
-      <Button variant="primary">Dogs</Button>
-      <Button variant="secondary">Cats</Button>
-      <Button variant="success">Reptiles</Button>
-    </ButtonGroup>
+              <ButtonGroup className="d-flex justify-content-between">
+                <Button variant="primary">Dogs</Button>
+                <Button variant="secondary">Cats</Button>
+                <Button variant="success">Reptiles</Button>
+              </ButtonGroup>
             </Col>
           </Row>
           <Row
-            className="mt-5 pt-5 col-8 mx-auto"
-            style={{
-              display: "grid",
-              gridTemplateAreas: "'pet1 pet2 pet3''pet4 pet5 pet6'",
-            }}
+            className="mt-5 pt-5 col-10 mx-auto mx-auto justify-content-between pet-container text-center"
           >
             {getPets.map((pet, i) => {
               return (
-                <Col
-                  xs="12"
-                  md="12"
-                  className="pet-info"
-                  style={{ gridArea: `pet${i + 1}` }}
-                  key={i}
-                >
-                  <Link className="nav-link" to={"/petProfile"}>
-                    <img src={pet.image_url} alt="" />
-                  </Link>git
-                  <p>Name: {pet.name}</p>
-                  <p>Age:{pet.age}</p>
-                </Col>
+                <PetInfo pet={pet} i={i} />
               );
             })}
           </Row>

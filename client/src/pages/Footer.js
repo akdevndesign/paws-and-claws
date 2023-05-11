@@ -3,9 +3,9 @@ import "../styles/styles.css";
 export default function Footer() {
   return (
     <footer className="pt-4">
-      <div className="container pt-4">
-        <div className="row justify-content-center pb-3 text-center">
-          <div className="col-md-4">
+      <div className="pt-4">
+        <div className="row col-10 justify-content-between pb-3 text-center mx-auto">
+          <div className="col-md-6">
             <h5>Paws &amp; Claws</h5>
             <p>&copy; 2023 Paws &amp; Claws</p>
             <a href="#">

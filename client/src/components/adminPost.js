@@ -1,25 +1,29 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 import "../styles/styles.css";
 
-export default function AdminPost() {
+export default function AdminPost(props) {
+
+    const { pet, i } = props;
+
     return (
-        <Col md={6}>
-            <Row className="admin-item col-10 mb-5 align-items-center">
-                {/* content for the first column goes here */}
-                <Col xs={3}>
-                    <img className="post-img" src="#" />
-                </Col>
-                <Col xs={6}>
-                    <h4>Arnold</h4>
-                    <p>4 yr Pomeranian</p>
-                </Col>
-                <Col className="text-center">
-                <i class="bi bi-trash cust-trash"></i>
+        <Row className="col-5 mb-5 align-items-center admin-item mt-1">
+            {/* content for the first column goes here */}
+            <Col xs={3}>
+                <Link className="nav-link" to={"/petProfile"}>
+                    <img src={pet.image_url} className="post-img" alt="" />
+                </Link>
+            </Col>
+            <Col xs={5}>
+                <h4>{pet.name}</h4>
+                <p>{pet.age} years old</p>
+            </Col>
+            <Col xs={2} className="text-center">
                 <p>12/12/2023</p>
-                </Col>
-            </Row>
-        </Col>
+            </Col>
+            <Col xs={2} className="text-center">
+                <i class="bi bi-trash cust-trash"></i>
+            </Col>
+        </Row>
     )
 }

@@ -1,34 +1,166 @@
 [{
-    "name": "Fluffy",
-    "animal_type": "Dog",
-    "age": 3,
-    "image_url": "https://example.com/fluffy.jpg",
-    "bio": "I am a very friendly dog.",
-    "activity_level": 7,
-    "cuddliness_level": 9,
-    "friendliness_level": 10,
-    "health_history": "None"
-  },
-  {
-    "name": "Smokey",
-    "animal_type": "Cat",
-    "age": 5,
-    "image_url": "https://example.com/smokey.jpg",
-    "bio": "I am a very independent cat.",
-    "activity_level": 5,
-    "cuddliness_level": 3,
-    "friendliness_level": 6,
-    "health_history": "None"
-  },
-  {
-    "name": "Lizzy",
-    "animal_type": "Reptile",
-    "age": 2,
-    "image_url": "https://example.com/lizzy.jpg",
-    "bio": "I am a leopard gecko. I like to eat crickets.",
-    "activity_level": 2,
-    "cuddliness_level": 1,
-    "friendliness_level": 5,
-    "health_history": "None"
-  }
-  ]
+  "name": "Fluffy",
+  "animal_type": "Dog",
+  "age": 3,
+  "image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683746823/karsten-winegeart-Qb7D1xw28Co-unsplash_t8l5um.jpg",
+  "bio": "I am a very friendly dog.",
+  "activity_level": 7,
+  "cuddliness_level": 9,
+  "friendliness_level": 10,
+  "health_history": "None"
+},
+{
+  "name": "Smokey",
+  "animal_type": "Cat",
+  "age": 5,
+  "image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683757589/girl-with-red-hat-HD7E0qHS7mc-unsplash_b6mzrh.jpg",
+  "bio": "I am a very independent cat.",
+  "activity_level": 5,
+  "cuddliness_level": 3,
+  "friendliness_level": 6,
+  "health_history": "None"
+},
+{
+  "name": "Iggy",
+  "animal_type": "Reptile",
+  "age": 2,
+  "image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683746812/selin-sahin-5DB3cYe7Nxk-unsplash_izak38.jpg",
+  "bio": "I am an iguana. I like to eat crickets and hang out on my warm rock.",
+  "activity_level": 2,
+  "cuddliness_level": 1,
+  "friendliness_level": 5,
+  "health_history": "I recely broke my leg but it is healing well."
+},
+{
+"name": "Miles",
+"animal_type": "Cat",
+"age": 4,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683757582/kanashi-BLW_KQ0Rkn0-unsplash_btwszs.jpg",
+"bio": "I am a fluffy white cat. I love to nap in cozy spots and play with string toys.",
+"activity_level": 2,
+"cuddliness_level": 5,
+"friendliness_level": 4,
+"health_history": "None"
+},
+{
+"name": "Shady",
+"animal_type": "Cat",
+"age": 2,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683760603/raoul-droog-yMSecCHsIBc-unsplash_gvjztl.jpg",
+"bio": "I am a sleek black cat. I love to lounge in the sun and watch birds outside.",
+"activity_level": 1,
+"cuddliness_level": 4,
+"friendliness_level": 5,
+"health_history": "Had a minor ear infection but was treated successfully"
+},
+{
+"name": "Ziggy",
+"animal_type": "Reptile",
+"age": 1,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683760596/fukayamamo-cHP9WBFKm9o-unsplash_z5m4od.jpg",
+"bio": "I am a chameleon. I love changing colors and catching bugs with my long tongue.",
+"activity_level": 4,
+"cuddliness_level": 1,
+"friendliness_level": 3,
+"health_history": "Had a minor respiratory infection last year but recovered fully"
+},
+{
+"name": "Spike",
+"animal_type": "Reptile",
+"age": 3,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683760615/fox-GS3SeOxKPH0-unsplash_hvsqbp.jpg",
+"bio": "I am a bearded dragon. I love basking in the sun and eating crickets and veggies.",
+"activity_level": 3,
+"cuddliness_level": 2,
+"friendliness_level": 4,
+"health_history": "No major health issues"
+},
+{
+"name": "Buddy",
+"animal_type": "Dog",
+"age": 1,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683760606/priscilla-du-preez-TAAhBuhE_9Y-unsplash_isslax.jpg",
+"bio": "I'm a friendly and energetic puppy. I love to play and sleep in the sun.",
+"activity_level": 4,
+"cuddliness_level": 4,
+"friendliness_level": 5,
+"health_history": "Up-to-date on all vaccinations."
+},
+{
+"name": "Max",
+"animal_type": "Dog",
+"age": 2,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683760593/karsten-winegeart-BJaqPaH6AGQ-unsplash_laevmr.jpg",
+"bio": "I'm a loyal and chill Frenchie. I enjoy playing with toys and going on walks around the city.",
+"activity_level": 5,
+"cuddliness_level": 2,
+"friendliness_level": 4,
+"health_history": "Recently had a minor surgery to remove a benign tumor."
+},
+{
+  "name": "Charlie",
+  "animal_type": "Dog",
+  "age": 2,
+  "image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683760606/manda-hansen-p5lS8DT3tSQ-unsplash_jd0igy.jpg",
+  "bio": "I'm a playful and curious Pom mix. I enjoy sniffing around and exploring new places.",
+  "activity_level": 3,
+  "cuddliness_level": 3,
+  "friendliness_level": 5,
+  "health_history": "Has a slight sensitivity to certain types of dog food."
+},
+{
+"name": "Smithy",
+"animal_type": "Cat",
+"age": 2,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683757577/kanashi-3dejnak626k-unsplash_ir22lr.jpg",
+"bio": "I am a shy but curious grey cat. I like to explore and play with string toys.",
+"activity_level": 2,
+"cuddliness_level": 3,
+"friendliness_level": 4,
+"health_history": "None"
+},
+{
+"name": "Mittens",
+"animal_type": "Cat",
+"age": 3,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683757585/jack-dong-yJozLVBxNA0-unsplash_ro6kuw.jpg",
+"bio": "I am a playful and affectionate tabby cat. I love to curl up in laps and chase toys.",
+"activity_level": 3,
+"cuddliness_level": 5,
+"friendliness_level": 4,
+"health_history": "Up-to-date on vaccinations"
+},
+{
+"name": "Buddy",
+"animal_type": "Dog",
+"age": 6,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683760590/victor-grabarczyk-2pbnDRhXc6Q-unsplash_acnty0.jpg",
+"bio": "I am old but the best cuddler. I don't require much exercise and I love to watch movies with you.",
+"activity_level": 2,
+"cuddliness_level": 4,
+"friendliness_level": 5,
+"health_history": "None"
+},
+{
+"name": "Rocky",
+"animal_type": "Dog",
+"age": 2,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683760597/charlesdeluvio-Mv9hjnEUHR4-unsplash_vksvqo.jpg",
+"bio": "I am a spunky and loyal terrier. I love to run around and play with my toys.",
+"activity_level": 5,
+"cuddliness_level": 3,
+"friendliness_level": 4,
+"health_history": "Has a history of ear infections, needs regular ear cleaning"
+},
+{
+"name": "Whiskers",
+"animal_type": "Cat",
+"age": 4,
+"image_url": "https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683746817/alvan-nee-ZCHj_2lJP00-unsplash_odoeci.jpg",
+"bio": "I am a fluffy and playful calico cat. I love to play with toys and climb cat trees.",
+"activity_level": 4,
+"cuddliness_level": 3,
+"friendliness_level": 5,
+"health_history": "Has a sensitive stomach, needs special diet"
+}
+]
