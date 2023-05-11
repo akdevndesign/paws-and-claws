@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Button, InputGroup, FormControl } from 'react-bootstrap';
 import "../styles/styles.css";
 
 export default function Header() {
   const [onHome, setOnHome] = useState(true);
   return (
     <section className="main-header">
-      <nav className="main navbar navbar-expand-lg col-6">
+      <nav className="main navbar navbar-expand-lg col-12">
         <div className="container-fluid">
-          <Link className="col-md-4" to={"/"} onClick={() => setOnHome(true)}>
-            PnC
+          <Link className="col-3" to={"/"} onClick={() => setOnHome(true)}>
+            <img src="https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_ICON_ONLY_ue6kqr.png" className="logo-img"/>
           </Link>
-          <div>
+          <div className="col-3">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link
@@ -31,25 +32,14 @@ export default function Header() {
               ) : (
                 <></>
               )}
-              <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  to={"/contact"}
-                  onClick={() => setOnHome(false)}
-                >
-                  Contact
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  to={"/account"}
-                  onClick={() => setOnHome(false)}
-                >
-                  Account
-                </Link>
-              </li>
             </ul>
+          </div>
+          <div className="col-md-2 col-sm-3">
+          </div>
+          <div className="col-1">
+            <Button id="donate" type="submit" className="text-right">
+              Donate
+            </Button>
           </div>
         </div>
       </nav>
