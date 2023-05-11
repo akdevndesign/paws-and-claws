@@ -1,69 +1,45 @@
 import "../styles/styles.css";
-import { Link } from "react-router-dom";
 import {
   Container,
   Row,
   Col,
   Button,
-  Navbar,
-  Nav,
-  InputGroup,
-  FormControl,
+  ButtonGroup
 } from "react-bootstrap";
-import {
-  ButtonDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from "reactstrap";
 import { useQuery } from "@apollo/client";
 import { QUERY_PROFILES } from "../utils/queries";
+import PetInfo from '../components/petInfo';
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const { data } = useQuery(QUERY_PROFILES);
   const getPets = data?.getPets || [];
   return (
     <div>
-      <Container fluid className="d-flex flex-wrap hero">
-        <Col md={7} className="p-3 hero-info text-center">
-          <h1>Welcome to</h1>
-          <h1>Paws &amp; Claws!</h1>
+      <Container fluid className="d-flex flex-wrap hero jumbotron jumbotron-fluid bg-lightblue position-relative">
+        <Col md={6} className="p-3 hero-info text-center tofront">
+          <Link>
+            <img src="https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_3_kyhwbh.png" alt="Paws and Claws" className="hero-img"></img>
+          </Link>
           <p className="mt-5">
             Find Your Forever Friend: Unconditional Love Awaits
           </p>
-          <Button variant="primary" size="lg" id="adoptNow">
-            Adopt Now
-          </Button>
         </Col>
-        <Col md={4} className="half">
-          <div className="styling styling-max">
-            <Navbar expand="lg" className="main">
-              <Container fluid>
-                <InputGroup className="input-group-search">
-                  <FormControl type="text" placeholder="Search..." />
-                  <InputGroup.Text style={{ width: "50px" }}>
-                    <span className="bi bi-search search-icon"></span>
-                  </InputGroup.Text>
-                </InputGroup>
-              </Container>
-            </Navbar>
-          </div>
-          <div className="donation">
-            <Button id="donate" type="submit" className="text-right">
-              Donate
-            </Button>
-          </div>
+        <Col md={6} className="header-image pt-6 pb-6 align-self-center">
+          {/* {{ #if posts.[0] }} */}
         </Col>
       </Container>
+
       <section className="hero-showcase" id="showcase">
         <Container className="col-6 mx-auto text-center">
           <h2>Fur, scales, claws or paws...</h2>
           <p>They might start different but they all end in friend</p>
         </Container>
       </section>
+
       <section className="showcase">
-        <Container className="pt-5 pb-5">
-          <Row className="pet-header justify-content-between mt-5 mb-5 col-6 mx-auto">
+        <Container fluid className="pt-5 pb-5 parent-container">
+          <Row className="pet-header justify-content-between mt-5 mb-5 col-sm-8 col-md-6 col-lg-4 mx-auto">
             <Col className="d-flex align-items-center mx-auto">
               <h3 className="mb-0">Pets Available</h3>
             </Col>
@@ -71,46 +47,22 @@ export default function Home() {
               md="6"
               className="d-flex justify-content-end align-items-center"
             >
-              <ButtonDropdown isOpen={false} toggle={() => {}}>
-                <DropdownToggle caret>Available</DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem>Dogs</DropdownItem>
-                  <DropdownItem>Cats</DropdownItem>
-                  <DropdownItem>Reptiles</DropdownItem>
-                </DropdownMenu>
-              </ButtonDropdown>
+              <ButtonGroup className="d-flex justify-content-between">
+                <Button variant="primary">Dogs</Button>
+                <Button variant="secondary">Cats</Button>
+                <Button variant="success">Reptiles</Button>
+              </ButtonGroup>
             </Col>
           </Row>
           <Row
-            className="mt-5 pt-5 col-8 mx-auto"
-            style={{
-              display: "grid",
-              gridTemplateAreas: "'pet1 pet2 pet3''pet4 pet5 pet6'",
-            }}
+            className="mt-5 pt-5 col-8 mx-auto justify-content-between pet-container text-center"
           >
             {getPets.map((pet, i) => {
               return (
-                <Col
-                  xs="12"
-                  md="12"
-                  className="pet-info"
-                  style={{ gridArea: `pet${i + 1}` }}
-                  key={i}
-                >
-                  <Link
-                    className="nav-link"
-                    // id={pet._id}
-                    // onClick={clickHandler}
-                    to={`/petProfile/${pet._id}`}
-                  >
-                    <img src={pet.image_url} alt="" />
-                  </Link>
-                  git
-                  <p>Name: {pet.name}</p>
-                  <p>Age:{pet.age}</p>
-                </Col>
+                <PetInfo pet={pet} i={i} />
               );
             })}
+
           </Row>
         </Container>
       </section>

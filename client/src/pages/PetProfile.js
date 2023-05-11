@@ -1,4 +1,3 @@
-import { Carousel } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { QUERY_PET } from "../utils/queries";
 import { useQuery } from "@apollo/client";
@@ -23,27 +22,19 @@ export default function PetProfile() {
         <div className="row profile">
           <div className="col-md-6">
             <div className="profile-img">
-              <Carousel
-                id="carouselExampleControls"
-                interval={null}
-                controls={false}
-              >
-                <Carousel.Item>
-                  <div className="circle-img">
-                    <img src={image_url} alt="" />
-                  </div>
-                </Carousel.Item>
-              </Carousel>
+              <div className="circle-img">
+                <img src={image_url} alt="" className="circle-img" />
+              </div>
             </div>
             <div className="mt-5">
               <h3>{name}</h3>
-              <p>Age: {age}</p>
+              <p>{age} years old</p>
               <p>Incarceration Date</p>
             </div>
           </div>
           <div className="col-md-6">
             <div className="bio">
-              <h3>Biography</h3>
+              <h3>About {name}!</h3>
               <p>{bio}</p>
             </div>
             <div className="levels">
@@ -63,14 +54,7 @@ export default function PetProfile() {
               <div className="cuddling">
                 <h4>Cuddling Level</h4>
                 <div className="progress mt-4 mb-4">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: `${cuddliness_level * 10}%` }}
-                    aria-valuenow="50"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  />
+                  <div className="progress-bar" role="progressbar" style={{ width: `${cuddliness_level * 10}%` }} />
                 </div>
               </div>
               <div className="friendly">
@@ -106,12 +90,10 @@ export default function PetProfile() {
         </div>
         <div className="row justify-content-center pt-5">
           <div className="col-md-4 text-center pt-5">
-            <button className="btn btn-lg" id="adoptNow">
-              Adopt Me Now!
-            </button>
+            <button className="btn btn-lg" id="adoptNow">Adopt Me Now!</button>
           </div>
         </div>
       </div>
     </section>
-  );
-}
+  )
+};

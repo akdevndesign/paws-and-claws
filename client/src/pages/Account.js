@@ -1,51 +1,95 @@
-import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import React from 'react';
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Container, Row, Col, Form, Button, DropdownButton, Dropdown } from 'react-bootstrap';
 
 export default function Account() {
   return (
-    <section className="login account-forms">
+    <section className="account-forms">
       <Container fluid>
-        <Row className="align-items-center">
-          <Col md={6} className="login-side">
-            <div className="col-8 mx-auto">
-              <Form className="login-form">
-                <h1 className="text-center">Paws and Claws</h1>
-                <h3 className="text-center">Login</h3>
-                <div className="col-8 mx-auto">
-                  <Form.Group controlId="formBasicUsername" className="mt-4 mb-4">
+        <Row className="align-items-center signup">
+          <Col xs={10} className="mx-auto">
+            <Form className="login-form row">
+              <h1 className="text-center">Paws and Claws</h1>
+              <Col xs={4} className="mt-5">
+                <h3 className="text-center mb-5">Account Information</h3>
+                <Col xs={8} className="mx-auto">
+                  <Form.Group className="mb-4" controlId="username">
                     <Form.Control type="text" placeholder="Username" />
                   </Form.Group>
-                  <Form.Group controlId="formBasicEmail" className="mt-4 mb-4">
-                    <Form.Control type="email" placeholder="Email" />
+                  <Form.Group className="mb-4" controlId="email">
+                    <Form.Control type="email" placeholder="user@email.com" />
                   </Form.Group>
-                  <Form.Group controlId="formBasicPassword" className="mt-4 mb-4">
-                    <Form.Control type="password" placeholder="Password" />
+                  <Form.Group className="mb-4" controlId="password">
+                    <Form.Control type="password" placeholder="*********" />
                   </Form.Group>
-                  <div className="text-center mt-5">
-                    <Button variant="primary" type="submit" className="btn-block" id="login-btn">
-                      Login
-                    </Button>
-                  </div>
-                </div>
+                </Col>
+              </Col>
+              <Col xs={4} className="mt-5">
+                <Col xs={8} className="mx-auto">
+                  <Form.Group className="mb-4" controlId="phone">
+                    <Form.Control type="text" placeholder="(999) 555-1111" />
+                  </Form.Group>
+                  <Form.Group className="mb-4" controlId="address">
+                    <Form.Control type="text" placeholder="1111 main st, city" />
+                  </Form.Group>
+                  <Form.Group className="mb-4" controlId="stateZip">
+                    <Form.Control type="text" placeholder="State, ZIP" />
+                  </Form.Group>
+                  <Form.Group className="mb-4" controlId="petExperience">
+                    <Form.Control type="text" placeholder="Pet Experience" />
+                  </Form.Group>
+                  <Form.Group className="mb-4" controlId="otherPets">
+                    <Form.Control type="text" placeholder="Other Pets" />
+                  </Form.Group>
+                </Col>
+              </Col>
+              <Col xs={4} className="mt-5">
+                <Col xs={12} className="mb-4 mt-5">
+                  <DropdownButton id="dropdown" title="Residence type" variant="secondary">
+                    <Dropdown.Item href="#">House</Dropdown.Item>
+                    <Dropdown.Item href="#">Town House</Dropdown.Item>
+                    <Dropdown.Item href="#">Apartment</Dropdown.Item>
+                  </DropdownButton>
+                </Col>
+                <Col xs={12} className="mb-4">
+                  <DropdownButton id="dropdown" title="Yard Size" variant="secondary">
+                    <Dropdown.Item href="#">0.05 acre</Dropdown.Item>
+                    <Dropdown.Item href="#">0.01-0.25 acre</Dropdown.Item>
+                    <Dropdown.Item href="#">0.5 acre+</Dropdown.Item>
+                  </DropdownButton>
+                </Col>
+                <Col xs={12} className="mb-4">
+                  <DropdownButton id="dropdown" title="Children" variant="secondary">
+                    <Dropdown.Item href="#">0</Dropdown.Item>
+                    <Dropdown.Item href="#">1-2</Dropdown.Item>
+                    <Dropdown.Item href="#">3+</Dropdown.Item>
+                  </DropdownButton>
+                </Col>
+                <Col xs={12} className="mb-4">
+                  <DropdownButton id="dropdown" title="Children Ages" variant="secondary">
+                    <Dropdown.Item href="#">1</Dropdown.Item>
+                    <Dropdown.Item href="#">1-2</Dropdown.Item>
+                    <Dropdown.Item href="#">3+</Dropdown.Item>
+                  </DropdownButton>
+                </Col>
+              </Col>
+              <div className="text-center mt-5">
+                <Button variant="primary" type="submit" block id="signup-btn">
+                  Signup
+                </Button>
                 <p className="mt-3 mb-0 text-center">
-                  Don't have an account? <a href="#">Create one here</a>
+                  Already have an account? <Link
+                  to={"/login"}
+                >
+                  Login
+                </Link>
                 </p>
-              </Form>
-            </div>
-          </Col>
-          <Col md={6} className="d-flex">
-            <div className="col-8 mx-auto text-center info-side">
-              <h2>A pet can help reduce stress and improve your mental health!</h2>
-              <p>
-                Pets, especially dogs and cats, can offer emotional support and become loyal and affectionate
-                companions, which can improve overall well-being and reduce stress and anxiety levels.
-                Additionally, pets can encourage owners to be more active, through daily walks and playtime,
-                which can promote physical health and a sense of routine.
-              </p>
-            </div>
+              </div>
+            </Form>
           </Col>
         </Row>
       </Container>
     </section>
-  );
+  )
 }

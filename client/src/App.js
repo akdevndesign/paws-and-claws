@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Account from "./pages/Account";
 import PetProfile from "./pages/PetProfile";
+import Login from "./pages/Login";
+import Admin from "./pages/Admin";
 import { Routes, Route, Outlet } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import "./styles/styles.css";
@@ -23,6 +25,8 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="account" element={<Account />} />
         <Route path="petProfile/:petId" element={<PetProfile />}/>
+        <Route path="login" element={<Login />} />
+        <Route path="admin" element={<Admin />} />
       </Routes>
       <Header />
       <Outlet />
