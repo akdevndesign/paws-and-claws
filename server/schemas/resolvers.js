@@ -75,6 +75,10 @@ const resolvers = {
       const pet = await Pets.findByIdAndUpdate(petId, petInput, { new: true });
       return pet;
     },
+    applicationSubmit: async (_, { petId, petInput }) => {
+      const pet = await Pets.findByIdAndUpdate(petId, petInput, { new: true });
+    },
+    
     createAdmin: async (_, { adminInput: { name, email, password } }) => {
       const existingAdmin = await Admin.findOne({ email });
       if (existingAdmin) {

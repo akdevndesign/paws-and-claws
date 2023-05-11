@@ -35,6 +35,7 @@ type User {
   pet_experience: Int!
   other_pets: String!
   other_pet_types: String
+  applicantions: Array
 }
 
 input AdminInput {
@@ -64,6 +65,7 @@ input PetInput {
   cuddliness_level: Int!
   friendliness_level: Int!
   health_history: String!
+  applications: Array
 }
 
 type Query {

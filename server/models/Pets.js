@@ -45,6 +45,11 @@ const petsSchema = new Schema({
     required: true,
     allowNull: false,
   },
+  applicantions: {
+    typpe: Array,
+    required: false,
+    allowNull: true,
+  }
 });
 
 const Pets = model("Pets", petsSchema);
