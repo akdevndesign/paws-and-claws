@@ -55,13 +55,14 @@ export default function Home() {
             </Col>
           </Row>
           <Row
-            className="mt-5 pt-5 col-10 mx-auto mx-auto justify-content-between pet-container text-center"
+            className="mt-5 pt-5 col-8 mx-auto justify-content-between pet-container text-center"
           >
             {getPets.map((pet, i) => {
               return (
                 <PetInfo pet={pet} i={i} />
               );
             })}
+
           </Row>
         </Container>
       </section>
