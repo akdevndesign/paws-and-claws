@@ -22,7 +22,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="account" element={<Account />} />
-        <Route path="petProfile" element={<PetProfile />} />
+        <Route path="petProfile/:petId" element={<PetProfile />}/>
       </Routes>
       <Header />
       <Outlet />
