@@ -14,10 +14,6 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const { data } = useQuery(QUERY_PROFILES);
   const getPets = data?.getPets || [];
-
-  console.log("getPets: ", getPets);
-  console.log("data :", data);
-
   return (
     <div>
       <Container fluid className="d-flex flex-wrap hero jumbotron jumbotron-fluid bg-lightblue position-relative">
