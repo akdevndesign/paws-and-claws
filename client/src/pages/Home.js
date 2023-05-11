@@ -22,10 +22,6 @@ import { QUERY_PROFILES } from "../utils/queries";
 export default function Home() {
   const { data } = useQuery(QUERY_PROFILES);
   const getPets = data?.getPets || [];
-
-  console.log("getPets: ", getPets);
-  console.log("data :", data);
-
   return (
     <div>
       <Container fluid className="d-flex flex-wrap hero">
@@ -98,12 +94,18 @@ export default function Home() {
                   xs="12"
                   md="12"
                   className="pet-info"
-                  style={{ gridArea: `pet${i + 1}`}}
-                  key= {i}
+                  style={{ gridArea: `pet${i + 1}` }}
+                  key={i}
                 >
-                  <Link className="nav-link" to={"/petProfile"}>
+                  <Link
+                    className="nav-link"
+                    // id={pet._id}
+                    // onClick={clickHandler}
+                    to={`/petProfile/${pet._id}`}
+                  >
                     <img src={pet.image_url} alt="" />
-                  </Link>git
+                  </Link>
+                  git
                   <p>Name: {pet.name}</p>
                   <p>Age:{pet.age}</p>
                 </Col>
