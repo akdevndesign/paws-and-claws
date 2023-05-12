@@ -126,34 +126,13 @@ html, body {
 */
 .showcase {
     background-color: var(--cream);
-    height: 90vh;
+    height: auto;
 }
 
 /*responsible for the showcase container
 where database elements are rendered*/
-.pet-container {
-    height: 750px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
 
 /* Pet Header */
-.pet-header {
-    background-color: var(--teal);
-    padding: 20px;
-    border-radius: 30px;
-    margin-bottom: 30px;
-    color: var(--white);
-}
-
-.dropdown {
-    margin-top: 20px;
-}
-
-.dropdown h4 {
-    display: inline-block;
-    margin-right: 10px;
-}
 
 /*  **** Pet Info cards ****  */
 
@@ -168,6 +147,12 @@ where database elements are rendered*/
     height: 250px;
     background: var(--color-4);
     border-radius: 125px;
+    transition: 0.25s;
+}
+
+.pet-info img:hover {
+    box-shadow: 3px 3px 6px var(--scroll);
+    scale: 105%;
 }
 
 .text-left {
@@ -322,12 +307,32 @@ Admin View Section
     box-shadow: 1px 1px 6px var(--scroll);
     height: 100px;
     border-radius: 50px;
+    transition: 0.25s;
+}
+
+.admin-item:hover {
+    scale: 105%;
 }
 
 .admin-container {
     margin: 0;
     height: 730px;
     overflow-y: scroll;
+}
+
+
+/*
+-------------------------------------------------
+            Admin Post Form 
+-------------------------------------------------
+*/
+
+.post-form {
+    background-color: var(--teal);
+    color: var(--white);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 50px;
 }
 
 /* Button Styling */
@@ -344,6 +349,10 @@ Admin View Section
 .btn:hover {
     background-color: var(--tomato);
     box-shadow: 2px 2px 6px var(--tomato);
+}
+
+.btn-lg:hover {
+    color: var(--white);
 }
 
 #donate:focus,
@@ -367,6 +376,20 @@ Admin View Section
 .cust-trash {
     color: var(--orange);
     font-size: 150%;
+}
+
+.cust-trash:hover {
+    color: red;
+}
+
+.cust-pencil {
+    font-size: 150%;
+    margin-right: 10px;
+    color: var(--teal);
+}
+
+.cust-pencil:hover {
+    color: green;
 }
 
 /*

@@ -29,7 +29,6 @@ export default function PetProfile() {
             <div className="mt-5">
               <h3>{name}</h3>
               <p>{age} years old</p>
-              <p>Incarceration Date</p>
             </div>
           </div>
           <div className="col-md-6">
@@ -71,26 +70,7 @@ export default function PetProfile() {
                 </div>
               </div>
             </div>
-            <div className="badges">
-              <h3>Badges</h3>
-              <div className="badge">
-                <img src="img/badge1.jpg" alt="" />
-              </div>
-              <div className="badge">
-                <img src="img/badge2.jpg" alt="" />
-              </div>
-              <div className="badge">
-                <img src="img/badge3.jpg" alt="" />
-              </div>
-              <div className="badge">
-                <img src="img/badge4.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row justify-content-center pt-5">
-          <div className="col-md-4 text-center pt-5">
-            <button className="btn btn-lg" id="adoptNow">Adopt Me Now!</button>
+              <button className="btn btn-lg" id="adoptNow">Adopt Me Now!</button>
           </div>
         </div>
       </div>
