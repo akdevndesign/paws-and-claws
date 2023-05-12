@@ -1,7 +1,7 @@
 import About from "./About";
 import Home from "./Home";
 import Contact from "./Contact";
-import Account from "./Account";
+import Application from "./Application";
 
 export default function Navigation({ onPage }) {
   let whichPage;
@@ -12,8 +12,8 @@ export default function Navigation({ onPage }) {
     case "contact":
       whichPage = <Contact />;
       break;
-    case "account":
-      whichPage = <Account />;
+    case "application":
+      whichPage = <Application />;
       break;
     default:
       whichPage = <Home />;

@@ -30,7 +30,7 @@ export default function Login(props) {
   };
 
   return (
-    <section className="login account-forms">
+    <section className="login application-forms">
       <Container fluid>
         <Row className="align-items-center">
           <Col md={6} className="login-side">
