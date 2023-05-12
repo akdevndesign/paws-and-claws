@@ -53,7 +53,6 @@ export default function Home() {
           </p>
         </Col>
         <Col md={6} className="header-image pt-6 pb-6 align-self-center">
-          {/* {{ #if posts.[0] }} */}
         </Col>
       </Container>
 
@@ -66,13 +65,11 @@ export default function Home() {
 
       <section className="showcase">
         <Container fluid className="pt-5 pb-5 parent-container">
-          <Row className="pet-header justify-content-between mt-5 mb-5 col-sm-8 col-md-6 col-lg-4 mx-auto">
-            <Col className="d-flex align-items-center mx-auto">
-              <h3 className="mb-0">Pets Available</h3>
-            </Col>
+          <Row className="justify-content-between mt-5 mb-5 col-sm-8 col-md-6 col-lg-4 mx-auto">
+              <h3 className="text-center">Pets Available</h3>
+
             <Col
-              md="6"
-              className="d-flex justify-content-end align-items-center"
+              className="mx-auto"
             >
               <ButtonGroup className="d-flex justify-content-between">
                 <Button
