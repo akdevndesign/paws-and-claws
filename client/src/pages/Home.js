@@ -1,25 +1,52 @@
 import "../styles/styles.css";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  ButtonGroup
-} from "react-bootstrap";
+import { useState } from "react";
+import { Container, Row, Col, Button, ButtonGroup } from "react-bootstrap";
 import { useQuery } from "@apollo/client";
 import { QUERY_PROFILES } from "../utils/queries";
-import PetInfo from '../components/petInfo';
+import PetInfo from "../components/petInfo";
 import { Link } from "react-router-dom";
 
 export default function Home() {
   const { data } = useQuery(QUERY_PROFILES);
-  const getPets = data?.getPets || [];
+  const allPets = data?.getPets || [];
+  const [petFilter, setPetFilter] = useState("all");
+  let getPets;
+  switch (petFilter) {
+    case "dogs":
+      getPets = allPets.filter((pet) => {
+        return pet.animal_type === "Dog";
+      });
+      break;
+    case "cats":
+      getPets = allPets.filter((pet) => {
+        return pet.animal_type === "Cat";
+      });
+      break;
+    case "reptiles":
+      getPets = allPets.filter((pet) => {
+        return pet.animal_type === "Reptile";
+      });
+      break;
+    default:
+      getPets = allPets;
+  }
+  console.log("getPets array: ", getPets);
+  const filterClickHandler = (event) => {
+    setPetFilter(event.target.getAttribute("data-type"));
+  };
   return (
     <div>
-      <Container fluid className="d-flex flex-wrap hero jumbotron jumbotron-fluid bg-lightblue position-relative">
+      <Container
+        fluid
+        className="d-flex flex-wrap hero jumbotron jumbotron-fluid bg-lightblue position-relative"
+      >
         <Col md={6} className="p-3 hero-info text-center tofront">
           <Link>
-            <img src="https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_3_kyhwbh.png" alt="Paws and Claws" className="hero-img"></img>
+            <img
+              src="https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_3_kyhwbh.png"
+              alt="Paws and Claws"
+              className="hero-img"
+            ></img>
           </Link>
           <p className="mt-5">
             Find Your Forever Friend: Unconditional Love Awaits
@@ -48,21 +75,41 @@ export default function Home() {
               className="d-flex justify-content-end align-items-center"
             >
               <ButtonGroup className="d-flex justify-content-between">
-                <Button variant="primary">Dogs</Button>
-                <Button variant="secondary">Cats</Button>
-                <Button variant="success">Reptiles</Button>
+                <Button
+                  variant="primary"
+                  data-type="dogs"
+                  onClick={filterClickHandler}
+                >
+                  Dogs
+                </Button>
+                <Button
+                  variant="secondary"
+                  data-type="cats"
+                  onClick={filterClickHandler}
+                >
+                  Cats
+                </Button>
+                <Button
+                  variant="success"
+                  data-type="reptiles"
+                  onClick={filterClickHandler}
+                >
+                  Reptiles
+                </Button>
+                <Button
+                  variant="success"
+                  data-type="all"
+                  onClick={filterClickHandler}
+                >
+                  All
+                </Button>
               </ButtonGroup>
             </Col>
           </Row>
-          <Row
-            className="mt-5 pt-5 col-8 mx-auto justify-content-between pet-container text-center"
-          >
+          <Row className="mt-5 pt-5 col-8 mx-auto justify-content-between pet-container text-center">
             {getPets.map((pet, i) => {
-              return (
-                <PetInfo pet={pet} i={i} />
-              );
+              return <PetInfo pet={pet} i={i} />;
             })}
-
           </Row>
         </Container>
       </section>
