@@ -13,6 +13,11 @@ type AuthData {
   tokenExpiration: Int!
 }
 
+type Auth {
+  token: ID
+  user: User
+}
+
 type Pet {
   _id: ID!
   name: String!
@@ -64,6 +69,7 @@ input PetInput {
   cuddliness_level: Int!
   friendliness_level: Int!
   health_history: String!
+  applications: [String]
 }
 
 type Query {
@@ -81,7 +87,7 @@ type Mutation {
   deleteAdmin(id: ID!): Admin
   createUser(userInput: UserInput): AuthData
   deleteUser(id: ID!): User
-  adminLogin(email: String!, password: String!): Admin
+  login(email: String!, password: String!): Auth
   createPet(petInput: PetInput): Pet
   deletePet(petId: ID!): Pet
   updatePet(petId: ID!, petInput: PetInput): Pet

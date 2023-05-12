@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
 import "../styles/styles.css";
 
+
 export default function Header() {
   const [onHome, setOnHome] = useState(true);
   return (

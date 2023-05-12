@@ -16,15 +16,19 @@ const adminSchema = new mongoose.Schema({
     required: true,
   },
 });
-
 adminSchema.pre('save', async function(next) {
-  const admin = this;
-  if (admin.isModified('password')) {
-    const salt = await bcrypt.genSalt(10);
-    admin.password = await bcrypt.hash(admin.password, salt);
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
   }
+
   next();
 });
+
+// compare the incoming password with the hashed password
+adminSchema.methods.isCorrectPassword = async function(password) {
+  return await bcrypt.compare(password, this.password);
+};
 
 const Admin = mongoose.model('Admin', adminSchema);
 
