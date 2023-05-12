@@ -3,6 +3,8 @@ const { isAdmin, isAuthenticated } = require("../middleware");
 const User = require("../models/User");
 const Pets = require("../models/Pets");
 const Admin = require("../models/Admin");
+const { AuthenticationError } = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -75,10 +77,6 @@ const resolvers = {
       const pet = await Pets.findByIdAndUpdate(petId, petInput, { new: true });
       return pet;
     },
-    applicationSubmit: async (_, { petId, petInput }) => {
-      const pet = await Pets.findByIdAndUpdate(petId, petInput, { new: true });
-    },
-    
     createAdmin: async (_, { adminInput: { name, email, password } }) => {
       const existingAdmin = await Admin.findOne({ email });
       if (existingAdmin) {
@@ -98,21 +96,38 @@ const resolvers = {
       const admin = await Admin.findByIdAndDelete(id);
       return admin;
     },
+    login: async (parent, { email, password }) => {
+      const user = await Admin.findOne({ email });
+      console.log('user', user)
+      if (!user) {
+        throw new AuthenticationError('Incorrect user');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    }
+  }
+
     // Admin Login
-    async adminLogin(_, { email, password }) {
-      const admin = await Admin.findOne({ email });
-      if (!admin) {
-        throw new Error("Email does not exist");
-      }
+    // async adminLogin(_, { email, password }) {
+    //   const admin = await Admin.findOne({ email });
+    //   if (!admin) {
+    //     throw new Error("Email does not exist");
+    //   }
     
-      const isCorrectPassword = await bcrypt.compare(password, admin.password);
-      if (!isCorrectPassword) {
-        throw new Error("Incorrect password");
-      }
+    //   const isCorrectPassword = await bcrypt.compare(password, admin.password);
+    //   if (!isCorrectPassword) {
+    //     throw new Error("Incorrect password");
+    //   }
     
-      return admin;
-    },
-  },
+    //   return admin;
+    // },
 };
 
 module.exports = resolvers;

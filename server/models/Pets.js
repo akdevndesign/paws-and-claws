@@ -45,8 +45,8 @@ const petsSchema = new Schema({
     required: true,
     allowNull: false,
   },
-  applicantions: {
-    typpe: Array,
+  applications: {
+    type: [String],
     required: false,
     allowNull: true,
   }
