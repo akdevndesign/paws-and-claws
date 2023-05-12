@@ -7,6 +7,7 @@ export const QUERY_PROFILES = gql`
       name
       age
       image_url
+      animal_type
     }
   }
 `;
@@ -24,10 +25,3 @@ export const QUERY_PET = gql`
     }
   }
 `;
-
-
-
-
-
-
-
