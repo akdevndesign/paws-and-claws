@@ -1,33 +1,51 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Button, InputGroup, FormControl } from 'react-bootstrap';
+import { Button } from "react-bootstrap";
 import "../styles/styles.css";
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export default function Header() {
+  const [onHome, setOnHome] = useState(true);
   return (
     <Navbar bg="light" expand="md" className="fixed-top">
       <Container>
-        <Navbar.Brand href="#home"><img src="https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_ICON_ONLY_ue6kqr.png" className="logo-img" alt="logo" /></Navbar.Brand>
+        <Navbar.Brand href={"/"} to={"/"} onClick={() => setOnHome(true)}>
+          <img
+            src="https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_ICON_ONLY_ue6kqr.png"
+            className="logo-img"
+            alt="logo"
+          />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#showcase">Our Pals</Nav.Link>
-            <Nav.Link href="#link">About</Nav.Link>
-            <Button id="donate" type="submit" className="text-center ms-auto">
-               Donate
-          </Button>
+            <Nav.Link
+              href={"/#showcase"}
+              to={"#showcase"}
+              onClick={() => setOnHome(false)}
+            >
+              Our Pals
+            </Nav.Link>
+            <Nav.Link
+              href={"/about"}
+              to={"/about"}
+              onClick={() => setOnHome(true)}
+            >
+              About
+            </Nav.Link>
+            <Button id="donate" type="submit" className="text-center">
+              Donate
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
-
 
 //   const [onHome, setOnHome] = useState(true);
 //   return (
