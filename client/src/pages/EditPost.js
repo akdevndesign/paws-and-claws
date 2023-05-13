@@ -87,11 +87,11 @@ export default function EditPost() {
           petInput: {
             name: petName,
             animal_type: animalType,
-            age: petAge,
+            age: parseInt(petAge),
             bio: petBio,
-            activity_level: activityLevel,
-            cuddliness_level: cuddliness,
-            friendliness_level: friendliness,
+            activity_level: parseInt(activityLevel),
+            cuddliness_level: parseInt(cuddliness),
+            friendliness_level: parseInt(friendliness),
           },
         },
       });
