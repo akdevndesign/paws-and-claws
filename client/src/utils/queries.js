@@ -22,6 +22,7 @@ export const QUERY_PET = gql`
       friendliness_level
       image_url
       name
+      animal_type
     }
   }
 `;

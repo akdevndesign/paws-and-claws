@@ -10,11 +10,11 @@ import Admin from "./pages/Admin";
 import NewPost from "./pages/NewPost";
 import EditPost from "./pages/EditPost";
 import { Routes, Route, Outlet } from "react-router-dom";
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import "./styles/styles.css";
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: "/graphql",
   cache: new InMemoryCache(),
 });
 
@@ -26,11 +26,11 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="account" element={<Account />} />
-        <Route path="petProfile/:petId" element={<PetProfile />}/>
+        <Route path="petProfile/:petId" element={<PetProfile />} />
         <Route path="login" element={<Login />} />
         <Route path="admin" element={<Admin />} />
         <Route path="newPost" element={<NewPost />} />
-        <Route path="editPost/:editPetId" element={<NewPost />} />
+        <Route path="editPost/:editPetId" element={<EditPost />} />
       </Routes>
       <Header />
       <Outlet />
