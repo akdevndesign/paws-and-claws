@@ -12,11 +12,14 @@ import {
 } from "reactstrap";
 import { useParams } from "react-router-dom";
 import { QUERY_PET } from "../utils/queries";
+import { UPDATE_PET } from "../utils/mutations";
 import { useQuery } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 
 export default function EditPost() {
   const { editPetId: id } = useParams();
   const { data, loading, error } = useQuery(QUERY_PET, { variables: { id } });
+  const [updatePet, { error: mutationError }] = useMutation(UPDATE_PET);
 
   const [activityLevel, setActivityLevel] = useState(null);
   const [petName, setName] = useState("");
@@ -25,7 +28,7 @@ export default function EditPost() {
   const [petBio, setBio] = useState("");
   const [cuddliness, setCuddliness] = useState(0);
   const [friendliness, setFriendliness] = useState(0);
-//   const [image, setImage] = useState("");
+  //   const [image, setImage] = useState("");
 
   useEffect(() => {
     if (data) {
@@ -36,7 +39,7 @@ export default function EditPost() {
       setBio(data.getPetById.bio);
       setCuddliness(data.getPetById.cuddliness_level);
       setFriendliness(data.getPetById.friendliness_level);
-    //   setImage(data.getPetById.image_url);
+      //   setImage(data.getPetById.image_url);
     }
   }, [data]);
 
@@ -71,21 +74,31 @@ export default function EditPost() {
     setFriendliness(event.target.value);
   };
 
-//   const handleImageChange = (event) => {
-//     setImage(event.target.files[0]);
-//   };
+  //   const handleImageChange = (event) => {
+  //     setImage(event.target.files[0]);
+  //   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log({
-      petName,
-      animalType,
-      petAge,
-      petBio,
-      activityLevel,
-      cuddliness,
-      friendliness,
-    });
+    try {
+      const response = await updatePet({
+        variables: {
+          petId: id,
+          petInput: {
+            name: petName,
+            animal_type: animalType,
+            age: petAge,
+            bio: petBio,
+            activity_level: activityLevel,
+            cuddliness_level: cuddliness,
+            friendliness_level: friendliness,
+          },
+        },
+      });
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -189,9 +202,16 @@ export default function EditPost() {
                 // onChange={handleImageChange}
               />
             </FormGroup>
+            {mutationError ? (
+              <div>
+                <p className="error-text">Update failed.</p>
+              </div>
+            ) : null}
             <div className="col-4 mx-auto d-flex justify-content-between">
-              <Button type="submit">Submit</Button>
-              <Link type="submit" to={"/admin"} className="btn">
+              <Button type="submit" to={"/admin"}>
+                Submit
+              </Button>
+              <Link type="button" to={"/admin"} className="btn">
                 Cancel
               </Link>
             </div>
