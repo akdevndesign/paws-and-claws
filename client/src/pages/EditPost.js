@@ -105,7 +105,7 @@ export default function EditPost() {
     <Container fluid>
       <Row className="align-items-center signup">
         <Col xs={6} className="mx-auto post-form">
-          <h1 className="text-center">Edit Friend Listing {animalType}</h1>
+          <h1 className="text-center">Edit Friend Listing</h1>
           <Form onSubmit={handleSubmit} className="col-8 mx-auto">
             <FormGroup>
               <Label for="name">Name:</Label>

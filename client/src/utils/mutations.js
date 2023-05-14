@@ -48,3 +48,29 @@ export const UPDATE_PET = gql`
     }
   }
 `;
+
+export const CREATE_PET = gql`
+  mutation CreatePet($petInput: PetInput!) {
+    createPet(petInput: $petInput) {
+      _id
+      name
+      animal_type
+      age
+      image_url
+      bio
+      health_history
+      activity_level
+      cuddliness_level
+      friendliness_level
+    }
+  }
+`;
+
+export const DELETE_PET = gql`
+  mutation DeletePet($petId: ID!) {
+    deletePet(petId: $petId) {
+      _id
+      name
+    }
+  }
+`;
