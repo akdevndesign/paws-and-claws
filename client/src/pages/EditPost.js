@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   Form,
   FormGroup,
@@ -10,22 +10,24 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import { useParams } from "react-router-dom";
 import { QUERY_PET } from "../utils/queries";
 import { UPDATE_PET } from "../utils/mutations";
-import { useQuery } from "@apollo/client";
-import { useMutation } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 
 export default function EditPost() {
   const { editPetId: id } = useParams();
-  const { data, loading, error } = useQuery(QUERY_PET, { variables: { id } });
+  const { data, loading, error } = useQuery(QUERY_PET, {
+    variables: { id },
+    fetchPolicy: "network-only",
+  });
   const [updatePet, { error: mutationError }] = useMutation(UPDATE_PET);
-
+  const navigate = useNavigate();
   const [activityLevel, setActivityLevel] = useState(null);
   const [petName, setName] = useState("");
   const [animalType, setAnimalType] = useState("");
   const [petAge, setAge] = useState(0);
   const [petBio, setBio] = useState("");
+  const [healthHistory, setHealthHistory] = useState("");
   const [cuddliness, setCuddliness] = useState(0);
   const [friendliness, setFriendliness] = useState(0);
   //   const [image, setImage] = useState("");
@@ -37,6 +39,7 @@ export default function EditPost() {
       setAnimalType(data.getPetById.animal_type);
       setAge(data.getPetById.age);
       setBio(data.getPetById.bio);
+      setHealthHistory(data.getPetById.health_history);
       setCuddliness(data.getPetById.cuddliness_level);
       setFriendliness(data.getPetById.friendliness_level);
       //   setImage(data.getPetById.image_url);
@@ -60,6 +63,10 @@ export default function EditPost() {
 
   const handleBioChange = (event) => {
     setBio(event.target.value);
+  };
+
+  const handleHealthHistoryChange = (event) => {
+    setHealthHistory(event.target.value);
   };
 
   const handleActivityLevelChange = (event) => {
@@ -96,6 +103,9 @@ export default function EditPost() {
         },
       });
       console.log(response);
+      if (response) {
+        navigate("/admin");
+      }
     } catch (err) {
       console.log(err);
     }
@@ -152,6 +162,16 @@ export default function EditPost() {
                 name="bio"
                 value={petBio}
                 onChange={handleBioChange}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="healthhistory">Health History:</Label>
+              <Input
+                type="textarea"
+                id="healthhistory"
+                name="healthhistory"
+                value={healthHistory}
+                onChange={handleHealthHistoryChange}
               />
             </FormGroup>
             <FormGroup>

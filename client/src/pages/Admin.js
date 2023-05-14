@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function Account() {
 
-    const { data } = useQuery(QUERY_PROFILES);
+    const { data } = useQuery(QUERY_PROFILES, { fetchPolicy: "network-only" });
     const getPets = data?.getPets || [];
 
     return (
@@ -28,7 +28,7 @@ export default function Account() {
                 <Row className="col-10 mt-5 mx-auto justify-content-around admin-container">
                     {getPets.map((pet, i) => {
                         return (
-                            <AdminPost pet={pet} i={i} />
+                            <AdminPost pet={pet} key={i} />
                         );
                     })}
                 </Row>

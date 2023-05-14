@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Form,
   FormGroup,
@@ -15,6 +15,7 @@ import { useMutation } from "@apollo/client";
 
 export default function NewPost() {
   const [createPet, { error }] = useMutation(CREATE_PET);
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [animalType, setAnimalType] = useState("");
   const [age, setAge] = useState("");
@@ -80,6 +81,9 @@ export default function NewPost() {
         },
       });
       console.log(response);
+      if (response) {
+        navigate("/admin");
+      }
     } catch (err) {
       console.log(err);
     }

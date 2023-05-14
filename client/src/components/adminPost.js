@@ -6,7 +6,7 @@ import { useMutation} from "@apollo/client";
 import { DELETE_PET } from "../utils/mutations";
 
 export default function AdminPost(props) {
-  const { pet, i } = props;
+  const { pet } = props;
   const [deletePet, { error }] = useMutation(DELETE_PET);
     const [isDeleted, setIsDeleted] = useState(false);
   const handlePetDelete = async () => {
