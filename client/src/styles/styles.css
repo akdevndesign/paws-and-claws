@@ -11,7 +11,8 @@
 
 * {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "brandon-grotesque", Arial, sans-serif;
+    font-size: 22px;
 }
 
 html, body {
@@ -48,7 +49,7 @@ html, body {
 
 .hero-img {
     height: auto;
-    width: 50vw;
+    width: 40vw;
 }
 
 .hero-info {
@@ -102,7 +103,7 @@ html, body {
     background-size:cover;
     background-image: 
     /* url(https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ); */
-    url(https://res.cloudinary.com/dusaigbyn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1683746802/karsten-winegeart-oU6KZTXhuvk-unsplash_ynehrf.jpg);
+    url(https://res.cloudinary.com/dusaigbyn/image/upload/ar_1:1,c_fill,g_auto,w_1000/v1683866440/karsten-winegeart-oU6KZTXhuvk-unsplash_teal_rsuyqd.jpg);
     background-position: right 50% bottom 0px;
 }
 
@@ -166,7 +167,7 @@ where database elements are rendered*/
 -------------------------------------------------
 */
 .pet-profile {
-    height: 100vh;
+    height: 100%;
 }
 
 .bio {
@@ -176,7 +177,16 @@ where database elements are rendered*/
 .profile {
     padding-top: 20vh;
 }
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.profile-text {
+  text-align: center;
+  margin-top: 1rem;
+}
 /* courasel */
 .circle-img {
     height: 500px;
@@ -214,7 +224,7 @@ where database elements are rendered*/
                 Login Section
 -------------------------------------------------
 */
-.account-forms {
+.application-forms {
     background-color: var(--orange);
 }
 

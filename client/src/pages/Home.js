@@ -48,29 +48,26 @@ export default function Home() {
               className="hero-img"
             ></img>
           </Link>
-          <p className="mt-5">
+          {/* <p className="mt-5">
             Find Your Forever Friend: Unconditional Love Awaits
-          </p>
+          </p> */}
         </Col>
-        <Col md={6} className="header-image pt-6 pb-6 align-self-center">
-        </Col>
+        <Col md={6} className="header-image pt-6 pb-6 align-self-center"></Col>
       </Container>
 
       <section className="hero-showcase" id="showcase">
-        <Container className="col-6 mx-auto text-center">
+        <Container className="col-6 mx-auto justify-content-center text-center">
           <h2>Fur, scales, claws or paws...</h2>
-          <p>They might start different but they all end in friend</p>
+          <p>Find your forever friend!</p>
         </Container>
       </section>
 
       <section className="showcase">
         <Container fluid className="pt-5 pb-5 parent-container">
           <Row className="justify-content-between mt-5 mb-5 col-sm-8 col-md-6 col-lg-4 mx-auto">
-              <h3 className="text-center">Pets Available</h3>
+            <h3 className="text-center">Pets Available</h3>
 
-            <Col
-              className="mx-auto"
-            >
+            <Col className="mx-auto">
               <ButtonGroup className="d-flex justify-content-between">
                 <Button
                   variant="primary"
