@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { QUERY_PET } from "../utils/queries";
 import { useQuery } from "@apollo/client";
+import { Link } from "react-router-dom";
 
 export default function PetProfile() {
   const { petId: id } = useParams();
@@ -26,14 +27,11 @@ export default function PetProfile() {
                 <img src={image_url} alt="" className="circle-img" />
               </div>
             </div>
-            <div className="mt-5">
-              <h3>{name}</h3>
-              <p>{age} years old</p>
-            </div>
           </div>
           <div className="col-md-6">
             <div className="bio">
               <h3>About {name}!</h3>
+              <p>{age} years old</p>
               <p>{bio}</p>
             </div>
             <div className="levels">
@@ -53,7 +51,11 @@ export default function PetProfile() {
               <div className="cuddling">
                 <h4>Cuddling Level</h4>
                 <div className="progress mt-4 mb-4">
-                  <div className="progress-bar" role="progressbar" style={{ width: `${cuddliness_level * 10}%` }} />
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    style={{ width: `${cuddliness_level * 10}%` }}
+                  />
                 </div>
               </div>
               <div className="friendly">
@@ -70,10 +72,14 @@ export default function PetProfile() {
                 </div>
               </div>
             </div>
-              <button className="btn btn-lg" id="adoptNow">Adopt Me Now!</button>
+            <Link to={`/application/${id}`}>
+              <button className="btn btn-lg" id="adoptNow">
+                Adopt Me Now!
+              </button>
+            </Link>
           </div>
         </div>
       </div>
     </section>
-  )
-};
+  );
+}

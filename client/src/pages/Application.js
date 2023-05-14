@@ -1,17 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
+import { useMutation, gql } from "@apollo/client";
 import {
   Container,
   Row,
   Col,
   Form,
   Button,
-  DropdownButton,
-  Dropdown,
 } from "react-bootstrap";
 
-export default function Account() {
+const SUBMIT_APPLICATION_MUTATION = gql`
+  mutation SubmitApplication($petId: ID!, $application: String!) {
+    submitApplication(petId: $petId, application: $application) {
+      name
+      applications
+    }
+  }
+`;
+
+export default function Application() {
+  const { petId } = useParams();
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
@@ -23,13 +33,38 @@ export default function Account() {
   const [numChildren, setNumChildren] = useState("");
   const [childrenAges, setChildrenAges] = useState("");
 
-  const handleSubmit = (event) => {
+  const [submitApplication] = useMutation(SUBMIT_APPLICATION_MUTATION);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // TODO: Handle form submission
+    const applicationData = {
+      email,
+      phone,
+      address,
+      stateZip,
+      petExperience,
+      otherPets,
+      residenceType,
+      yardSize,
+      numChildren,
+      childrenAges,
+    };
+
+    try {
+      await submitApplication({
+        variables: {
+          petId,
+          application: JSON.stringify(applicationData),
+        },
+      });
+      console.log("application data ",applicationData)
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
-    <section className="account-forms">
+    <section className="application-forms">
       <Container fluid>
         <Row className="align-items-center signup">
           <Col xs={10} className="mx-auto">

@@ -11,6 +11,16 @@ export const LOGIN = gql`
   }
 `;
 
+export const SUBMIT_APPLICATION_MUTATION = gql`
+  mutation SubmitApplication($petId: ID!, $application: String!) {
+    submitApplication(petId: $petId, application: $application) {
+      name
+      applications
+    }
+  }
+`;
+
+
 export const ADD_USER = gql`
   mutation addUser(
     $firstName: String!

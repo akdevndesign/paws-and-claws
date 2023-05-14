@@ -29,6 +29,7 @@ type Pet {
   cuddliness_level: Int!
   friendliness_level: Int!
   health_history: String!
+  applications: [String]
 }
 
 type User {

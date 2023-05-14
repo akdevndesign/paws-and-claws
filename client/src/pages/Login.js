@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col} from "react-bootstrap";
 import { useMutation } from "@apollo/client";
 import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
@@ -30,7 +30,7 @@ export default function Login(props) {
   };
 
   return (
-    <section className="login account-forms">
+    <section className="login application-forms">
       <Container fluid>
         <Row className="align-items-center">
           <Col md={6} className="login-side">
