@@ -21,6 +21,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
@@ -32,7 +33,6 @@ function App() {
         <Route path="newPost" element={<NewPost />} />
         <Route path="editPost/:editPetId" element={<EditPost />} />
       </Routes>
-      <Header />
       <Outlet />
       <Footer />
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
