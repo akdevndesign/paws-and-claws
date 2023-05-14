@@ -64,12 +64,12 @@ input PetInput {
   name: String!
   animal_type: String!
   age: Int!
-  image_url: String!
+  image_url: String
   bio: String!
   activity_level: Int!
   cuddliness_level: Int!
   friendliness_level: Int!
-  health_history: String!
+  health_history: String
   applications: [String]
 }
 

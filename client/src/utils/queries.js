@@ -18,10 +18,12 @@ export const QUERY_PET = gql`
       activity_level
       age
       bio
+      health_history
       cuddliness_level
       friendliness_level
       image_url
       name
+      animal_type
     }
   }
 `;

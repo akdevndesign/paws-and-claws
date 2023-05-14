@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function PetProfile() {
   const { petId: id } = useParams();
-  const { data, loading, error } = useQuery(QUERY_PET, { variables: { id } });
+  const { data, loading, error } = useQuery(QUERY_PET, { variables: { id }, fetchPolicy: "network-only" });
   const {
     activity_level,
     cuddliness_level,
