@@ -582,12 +582,9 @@ container where everything lives/ the grid
     .hero {
         width: 100%;
         height: auto;
-    }
-
-    .hero {
         display: block !important;
     }
-
+    
     .hero-logo {
         content: url("https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_v0tfd8.png");
     }
