@@ -112,7 +112,7 @@ export default function NewPost() {
   return (
     <Container fluid>
       <Row className="align-items-center signup">
-        <Col xs={6} className="mx-auto post-form">
+        <Col xs={12} md={6} className="mx-auto post-form">
           <h1 className="text-center">New Friend Listing</h1>
           <Form onSubmit={handleSubmit} className="col-8 mx-auto">
             <FormGroup>
@@ -224,7 +224,7 @@ export default function NewPost() {
                 <p className="error-text">Failed to create post.</p>
               </div>
             ) : null}
-            <div className="col-4 mx-auto d-flex justify-content-between">
+            <div className="col-lg-6 mx-auto d-flex justify-content-between">
               <Button type="submit">Submit</Button>
               <Link type="submit" to={"/admin"} className="btn">
                 Cancel

@@ -28,19 +28,19 @@ export default function AdminPost(props) {
     return null;
   } else {
     return (
-      <Row className="col-5 mb-5 align-items-center admin-item mt-1">
+      <Row className="col-lg-5 col-sm-12 mb-5 align-items-center admin-item mt-1">
         {/* content for the first column goes here */}
-        <Col xs={3}>
+        <Col xs={4} md={3}>
           <Link className="nav-link" to={`/petProfile/${pet._id}`}>
             <img src={pet.image_url} className="post-img" alt="" />
           </Link>
         </Col>
-        <Col xs={6}>
+        <Col xs={5} md={6}>
           <h4>{pet.name}</h4>
           <p>{pet.age} years old</p>
         </Col>
         {error ? <p>Unable to delete.</p> : null}
-        <Col xs={3} className="text-center">
+        <Col xs={2} md={3} className="text-center">
           <Link to={`/editPost/${pet._id}`}>
             <i class="bi bi-pencil cust-pencil"></i>
           </Link>

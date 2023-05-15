@@ -13,10 +13,10 @@ export default function Application() {
     <section className="admin position-relative">
       <Container fluid className="admin-content">
         <Row className="align-items-center mt-5">
-          <Col xs={10} className="mx-auto">
+          <Col lg={10} xs={6} className="mx-auto">
             <h3>Admin</h3>
           </Col>
-          <Col xs={2}>
+          <Col lg={2} xs={6}>
             <Link
               id="newPost"
               type="submit"

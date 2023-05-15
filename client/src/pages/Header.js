@@ -12,7 +12,7 @@ export default function Header() {
   const [onHome, setOnHome] = useState(true);
   return (
     <Navbar bg="light" expand="md" className="fixed-top">
-      <Container>
+      <Container className="align-items-center">
         <Navbar.Brand href={"/"} to={"/"} onClick={() => setOnHome(true)}>
           <img
             src="https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_ICON_ONLY_ue6kqr.png"
@@ -37,9 +37,9 @@ export default function Header() {
             >
               About
             </Nav.Link>
-            <Button id="donate" type="submit" className="text-center">
+            <Link id="donate" type="submit" className="btn donation" to={"https://donate.stripe.com/test_fZe2967MhgWv9Py5kk"}>
               Donate
-            </Button>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

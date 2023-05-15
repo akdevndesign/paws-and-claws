@@ -67,7 +67,7 @@ export default function Application() {
     <section className="application-forms">
       <Container fluid>
         <Row className="align-items-center signup">
-          <Col xs={10} className="mx-auto">
+          <Col md={10} className="mx-auto">
             <Form className="login-form row" onSubmit={handleSubmit}>
               <Link to="/">
                 <img
@@ -77,7 +77,7 @@ export default function Application() {
                 />
               </Link>
               <h3 className="text-center">Adoption Application</h3>
-              <Col xs={4} className="mt-5">
+              <Col xs={12} lg={4} className="mt-5">
                 <Col xs={12} className="mx-auto">
                   <h4>Email</h4>
                   <Form.Group className="mb-4" controlId="email">
@@ -116,7 +116,7 @@ export default function Application() {
                   </Form.Group>
                 </Col>
               </Col>
-              <Col xs={4} className="mt-5">
+              <Col xs={12} lg={4} className="mt-5">
                 <Col xs={12} className="mx-auto">
                   <h4>What is your pet experience?</h4>
                   <Form.Select
@@ -166,7 +166,7 @@ export default function Application() {
                   </Col>
                 </Col>
               </Col>
-              <Col xs={4} className="mt-5">
+              <Col xs={12} lg={4} className="mt-5">
                 <Col xs={12} className="mb-4">
                   <h4>Children in the household?</h4>
                   <Form.Select

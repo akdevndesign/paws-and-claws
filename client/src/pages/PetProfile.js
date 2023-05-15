@@ -18,17 +18,17 @@ export default function PetProfile() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
   return (
-    <section className="pet-profile">
-      <div className="container">
+    <div className="container pet-profile">
+      <div className="col-sm-12 col-md-10 col-lg-10 mx-auto">
         <div className="row profile">
-          <div className="col-md-6">
+          <div className="col-lg-6 col-md-8">
             <div className="profile-img">
               <div className="circle-img">
                 <img src={image_url} alt="" className="circle-img" />
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-lg-6 col-sm-12">
             <div className="bio">
               <h3>About {name}!</h3>
               <p>{age} years old</p>
@@ -80,6 +80,6 @@ export default function PetProfile() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

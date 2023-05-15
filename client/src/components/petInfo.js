@@ -8,7 +8,7 @@ function PetInfo(props) {
   console.log(pet._id);
 
   return (
-    <div className="col-md-4 col-xs-6">
+    <div className="col-md-4">
       <Col xs="12" md="12" className="pet-info" style={{ gridArea: `pet${i + 1}` }} key={i}>
         <Link className="nav-link" to={`/petProfile/${pet._id}`}>
           <img src={pet.image_url} alt={pet.name} />
