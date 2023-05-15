@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 export default function About() {
   return (
-    <div>
+    <div id="about">
       <Container
         fluid
         className="d-flex about position-relative"

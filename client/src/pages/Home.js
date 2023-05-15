@@ -35,7 +35,7 @@ export default function Home() {
     setPetFilter(event.target.getAttribute("data-type"));
   };
   return (
-    <div>
+    <div id="home">
       <Container
         fluid
         className="d-flex flex-wrap hero jumbotron jumbotron-fluid bg-lightblue position-relative"

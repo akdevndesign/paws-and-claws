@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="pt-4">
         <div className="row col-10 justify-content-center pb-3 text-center mx-auto">
           <div className="col-md-6">
-            <img src="https://res.cloudinary.com/dusaigbyn/image/upload/c_thumb,w_200,g_face/v1683762073/paws_n_claws_logo_font_only_3_gcvqwf.png"></img>
+            <h5>Paws &amp; Claws</h5>
             <p>&copy; 2023 Paws &amp; Claws</p>
           </div>
           {/* <div className="col-md-4">

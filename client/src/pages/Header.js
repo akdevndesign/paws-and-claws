@@ -31,8 +31,8 @@ export default function Header() {
               Our Pals
             </Nav.Link>
             <Nav.Link
-              href={"/about"}
-              to={"/about"}
+              href={"/#about"}
+              to={"#about"}
               onClick={() => setOnHome(true)}
             >
               About
