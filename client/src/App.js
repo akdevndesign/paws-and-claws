@@ -9,12 +9,29 @@ import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import NewPost from "./pages/NewPost";
 import EditPost from "./pages/EditPost";
+import { setContext } from '@apollo/client/link/context';
 import { Routes, Route, Outlet } from "react-router-dom";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import "./styles/styles.css";
 
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem('id_token');
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
 const client = new ApolloClient({
-  uri: "/graphql",
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
@@ -24,7 +41,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
+        {/* <Route path="about" element={<About />} /> */}
         <Route path="contact" element={<Contact />} />
         <Route path="application/:petId" element={<Application />} />
         <Route path="petProfile/:petId" element={<PetProfile />} />
@@ -33,6 +50,7 @@ function App() {
         <Route path="newPost" element={<NewPost />} />
         <Route path="editPost/:editPetId" element={<EditPost />} />
       </Routes>
+      <About />
       <Outlet />
       <Footer />
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
