@@ -297,6 +297,7 @@ where database elements are rendered*/
 .login-form {
     background-color: var(--teal);
     box-shadow: 3px 3px 6px var(--color-7);
+    border-radius: 50px;
     padding: 20px;
     color: var(--white);
 }
@@ -566,6 +567,10 @@ container where everything lives/ the grid
     }
 
     .post-form {
+        border-radius: 0px;
+    }
+
+    .login-form {
         border-radius: 0px;
     }
 
