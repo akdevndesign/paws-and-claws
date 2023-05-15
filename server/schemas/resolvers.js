@@ -24,6 +24,18 @@ const resolvers = {
       const user = await User.findById(id);
       return user;
     },
+    // adminPage: async (parent, { _id }, context) => {
+    //   if (context.user) {
+    //     const user = await Admin.findById(context.user._id).populate({
+    //       path: 'admin',
+    //       populate: 'ad'
+    //     });
+
+    //     return user.orders.id(_id);
+    //   }
+
+    //   throw new AuthenticationError('Not logged in');
+    // },
   },
   Mutation: {
     // User Registration

@@ -45,7 +45,7 @@ export default function Home() {
             <img
               src="https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_3_kyhwbh.png"
               alt="Paws and Claws"
-              className="hero-img"
+              className="hero-img hero-logo"
             ></img>
           </Link>
           {/* <p className="mt-5">
