@@ -4,8 +4,8 @@
     --cream: #f6ebe1;
     --orange: #d25632;
     --teal: #086c74;
-    --tomato:#F06543;
-    --light-teal:#b7e0d5;
+    --tomato: #F06543;
+    --light-teal: #b7e0d5;
     --scroll: #D1C6BB;
 }
 
@@ -15,7 +15,8 @@
     font-size: 22px;
 }
 
-html, body {
+html,
+body {
     background-color: white;
     height: 100%;
     margin: 0;
@@ -73,7 +74,7 @@ html, body {
 .styling {
     background: radial-gradient(ellipse at top right, var(--color-1), var(--color-2) 90%);
     width: 90%;
-    height:80vh;
+    height: 80vh;
     border-radius: 0 0 0 200px;
 }
 
@@ -93,18 +94,18 @@ html, body {
 
 .donation {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 20px;
+    right: 100px;
 }
 
 /*  -----------------------------  */
 
-.header-image{
+.header-image {
     height: 90vh;
-    background-size:cover;
-    background-image: 
-    /* url(https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ); */
-    url(https://res.cloudinary.com/dusaigbyn/image/upload/ar_1:1,c_fill,g_auto,w_1000/v1683866440/karsten-winegeart-oU6KZTXhuvk-unsplash_teal_rsuyqd.jpg);
+    background-size: cover;
+    background-image:
+        /* url(https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ); */
+        url(https://res.cloudinary.com/dusaigbyn/image/upload/ar_1:1,c_fill,g_auto,w_1000/v1683866440/karsten-winegeart-oU6KZTXhuvk-unsplash_teal_rsuyqd.jpg);
     background-position: right 50% bottom 0px;
 }
 
@@ -120,24 +121,28 @@ html, body {
     color: var(--white);
     text-shadow: 3px 3px 6px #2222;
 }
+
 /*
 -------------------------------------------------
                 About Us
 -------------------------------------------------
 */
 .about-showcase {
-    padding-top: 30px;
-    padding-bottom: 50px;
     background-color: var(--teal);
     color: var(--white);
     text-shadow: 3px 3px 6px #2222;
 }
 
+.about-showcase .cont {
+    padding: 30px;
+}
+
 .about {
-    height: 90vh;
-    margin-bottom: -10px;
-    margin-left: 10px;
-    padding-bottom: 700px;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+
+    min-height: 1000px;
 }
 
 .about-img {
@@ -146,8 +151,9 @@ html, body {
 }
 
 .about-info {
-    margin-top: 150px;
-    padding-right: 40px
+    margin-top: 100px;
+    margin-bottom: 55px;
+    color: var(--teal);
 }
 
 .about-info h2 {
@@ -161,14 +167,16 @@ html, body {
 .about-info p {
     color: var(--black);
 }
-.about-image{
+
+.about-image {
     /* height: 80vh; */
-    background-size:cover;
-    background-image: 
-    /* url(https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ); */
-    url(https://res.cloudinary.com/dusaigbyn/image/upload/v1684118002/hannah-lim-U6nlG0Y5sfs-unsplash_blue_bckgd_yrll8i.jpg);
+    background-size: cover;
+    background-image:
+        /* url(https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ); */
+        url(https://res.cloudinary.com/dusaigbyn/image/upload/v1684118002/hannah-lim-U6nlG0Y5sfs-unsplash_blue_bckgd_yrll8i.jpg);
     background-position: right 50% bottom 0px;
 }
+
 /* 
 -------------------------------------------------
                 Showcase
@@ -217,6 +225,7 @@ where database elements are rendered*/
 */
 .pet-profile {
     height: 100%;
+    min-height: 1200px;
 }
 
 .bio {
@@ -226,26 +235,28 @@ where database elements are rendered*/
 .profile {
     padding-top: 20vh;
 }
+
 .profile-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .profile-text {
-  text-align: center;
-  margin-top: 1rem;
+    text-align: center;
+    margin-top: 1rem;
 }
+
 /* courasel */
 .circle-img {
-    height: 500px;
-    width: 500px;
+    height: auto;
+    width: 100%;
     border-radius: 250px;
     background: var(--cream);
 }
 
 .profile-img {
-    width: 500px;
+    width: 100%;
 }
 
 /* Badges */
@@ -333,7 +344,7 @@ Admin View Section
 -------------------------------------------------
 */
 .admin {
-    height: auto;
+    height: 100vh;
     color: var(--orange);
 }
 
@@ -355,10 +366,9 @@ Admin View Section
 }
 
 .post-img {
-    margin-left: -12px;
+    margin-left: -18px;
     height: 100px;
     width: 100px;
-    background-color: var(--teal);
     border-radius: 50px;
 }
 
@@ -475,7 +485,7 @@ footer {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background:var(--orange);
+    background: var(--orange);
 }
 
 /* Handle on hover */
@@ -514,12 +524,101 @@ container where everything lives/ the grid
 */
 
 @media screen and (max-width: 450px) {
+
+    /* Main Page */
+    body {
+        overflow: visible;
+        min-width: 100vw;
+    }
+
+    .hero {
+        height: 65vh;
+    }
+
+    .hero-info {
+        margin-top: 88px;
+    }
+
     .hero-img {
         width: 90vw;
     }
+
+    .pet-info img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .col-md-4 {
+        flex: 0 0 50%;
+        /* Override the width for mobile devices */
+        max-width: 50%;
+    }
+
+    /* Pet Profile Page */
+    .profile-img {
+        width: 90vw;
+        height: auto;
+    }
+
+    .circle-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .post-form {
+        border-radius: 0px;
+    }
+
+    .header-image {
+        display: none;
+    }
+
+    .d-flex {
+        display: block !important;
+    }
+
 }
+
 @media only screen and (max-width: 768px) {
     .hero-logo {
-      content: url("https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_v0tfd8.png");
+        content: url("https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_v0tfd8.png");
     }
-  }
+
+
+    .about {
+        height: auto;
+    }
+
+    .about-info {
+        margin: 0;
+    }
+
+    .pet-profile {
+        width: 100%;
+        text-align: center;
+    }
+
+    .admin {
+        height: auto;
+    }
+
+    .admin-container {
+        overflow: visible;
+        height: auto;
+    }
+
+    .admin-content {
+        height: auto;
+    }
+
+    .admin-item h3,
+    p {
+        font-size: 70%;
+    }
+
+    .cust-trash,
+    .cust-pencil {
+        font-size: 100%;
+    }
+
+}

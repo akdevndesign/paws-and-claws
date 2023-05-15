@@ -56,7 +56,7 @@ export default function Home() {
       </Container>
 
       <section className="hero-showcase" id="showcase">
-        <Container className="col-6 mx-auto justify-content-center text-center">
+        <Container className="col-xs-12 col-lg-6 mx-auto justify-content-center text-center">
           <h2>Fur, scales, claws or paws...</h2>
           <p>Find your forever friend!</p>
         </Container>
@@ -100,7 +100,7 @@ export default function Home() {
               </ButtonGroup>
             </Col>
           </Row>
-          <Row className="mt-5 pt-5 col-8 mx-auto justify-content-between pet-container text-center">
+          <Row className="mt-5 pt-5 col-xs-12 col-lg-8 mx-auto justify-content-between pet-container text-center">
             {getPets.map((pet, i) => {
               return <PetInfo pet={pet} i={i} />;
             })}

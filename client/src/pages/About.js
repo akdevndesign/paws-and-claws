@@ -14,7 +14,7 @@ export default function About() {
     <div>
       <Container
         fluid
-        className="d-flex flex-wrap about jumbotron jumbotron-fluid bg-lightblue position-relative"
+        className="d-flex about position-relative"
       >
         <Col md={6} className="about-image align-self-left"></Col>
         <Col md={6} className="p-3 about-info text-center tofront">
@@ -44,7 +44,7 @@ export default function About() {
       </Container>
 
       <section className="about-showcase" id="showcase">
-        <Container className="col-6 mx-auto justify-content-center text-center">
+        <Container className="col-xs-12 col-md-6 mx-auto justify-content-center text-center cont">
           <h2>Contact</h2>
           <p>Phone: 555-555-5555</p>
           <p>Email: arfarfmeow@pawsnclaws.com</p>
