@@ -8,6 +8,7 @@
 
 - [Decription](#decription)
 - [Demo-Image](#demo-image)
+- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
@@ -26,6 +27,17 @@ Paws and Claws is a web application that uses the React JavaScript library for b
 ![image](https://github.com/akdevndesign/paws-and-claws/assets/62455130/cbfc293a-de8a-44ea-b865-0ea2b391ab8a)
 
 ---
+### Features 
+
+* GraphQL
+* Express.js
+* React.js
+* Apollo
+* Bootstrap
+* Bcrypt 
+* Mongoose/MongoDB
+* Cloudinary
+* Stripe
 
 ---
 
