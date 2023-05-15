@@ -536,10 +536,6 @@ container where everything lives/ the grid
         height: 65vh;
     }
 
-    .hero-info {
-        margin-top: 88px;
-    }
-
     .hero-img {
         width: 90vw;
     }
@@ -574,21 +570,35 @@ container where everything lives/ the grid
         border-radius: 0px;
     }
 
-    .header-image {
-        display: none;
-    }
-
-    .d-flex {
-        display: block !important;
+    .signup {
+        margin-top: 80px;
+        padding: 0;
     }
 
 }
 
 @media only screen and (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero {
+        display: block !important;
+    }
+
     .hero-logo {
         content: url("https://res.cloudinary.com/dusaigbyn/image/upload/v1683762073/Paws_n_claws_logo_FINAL_v0tfd8.png");
     }
 
+    .hero-info {
+        margin-top: 88px;
+    }
+
+    .header-image {
+        display: none;
+    }
 
     .about {
         height: auto;
@@ -617,7 +627,7 @@ container where everything lives/ the grid
     }
 
     .admin-item h3,
-    p {
+    .admin-item p {
         font-size: 70%;
     }
 
