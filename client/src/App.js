@@ -24,7 +24,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
+        {/* <Route path="about" element={<About />} /> */}
         <Route path="contact" element={<Contact />} />
         <Route path="application/:petId" element={<Application />} />
         <Route path="petProfile/:petId" element={<PetProfile />} />
@@ -33,6 +33,7 @@ function App() {
         <Route path="newPost" element={<NewPost />} />
         <Route path="editPost/:editPetId" element={<EditPost />} />
       </Routes>
+      <About />
       <Outlet />
       <Footer />
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
