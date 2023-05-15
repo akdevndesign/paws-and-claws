@@ -457,3 +457,15 @@ container where everything lives/ the grid
 .img:hover {
     scale: 1.15;
 }
+
+/*
+-------------------------------------------------
+                Footer 
+-------------------------------------------------
+*/
+
+@media screen and (max-width: 450px) {
+    .hero-img {
+        width: 90vw;
+    }
+}

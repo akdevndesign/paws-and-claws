@@ -37,9 +37,9 @@ export default function Header() {
             >
               About
             </Nav.Link>
-            <Button id="donate" type="submit" className="text-center">
+            <Link id="donate" type="submit" className="btn donation" to={"https://murmuring-waters-06827.herokuapp.com/"}>
               Donate
-            </Button>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
