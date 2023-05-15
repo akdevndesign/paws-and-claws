@@ -345,7 +345,7 @@ Admin View Section
 -------------------------------------------------
 */
 .admin {
-    height: 100vh;
+    height: auto;
     color: var(--orange);
 }
 
