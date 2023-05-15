@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   Form,
@@ -30,7 +30,28 @@ export default function EditPost() {
   const [healthHistory, setHealthHistory] = useState("");
   const [cuddliness, setCuddliness] = useState(0);
   const [friendliness, setFriendliness] = useState(0);
-  //   const [image, setImage] = useState("");
+  const [image, setImage] = useState("");
+
+
+  const cloudinaryRef = useRef();
+  const widgetRef = useRef();
+  useEffect(() => {
+    cloudinaryRef.current = window.cloudinary;
+    widgetRef.current = cloudinaryRef.current.createUploadWidget(
+      {
+        cloudName: "dusaigbyn",
+        uploadPreset: "tstxkivf",
+      },
+      function (error, result) {
+        console.log("result: ", result);
+        if (!error && result && result.event === "success") {
+          setImage(result.info.secure_url);
+          console.log("result info: ", result.info.secure_url);
+        }
+      }
+    );
+  }, []);
+
 
   useEffect(() => {
     if (data) {
@@ -42,7 +63,7 @@ export default function EditPost() {
       setHealthHistory(data.getPetById.health_history);
       setCuddliness(data.getPetById.cuddliness_level);
       setFriendliness(data.getPetById.friendliness_level);
-      //   setImage(data.getPetById.image_url);
+      setImage(data.getPetById.image_url);
     }
   }, [data]);
 
@@ -99,6 +120,7 @@ export default function EditPost() {
             activity_level: parseInt(activityLevel),
             cuddliness_level: parseInt(cuddliness),
             friendliness_level: parseInt(friendliness),
+            image_url: image,
           },
         },
       });
@@ -214,13 +236,11 @@ export default function EditPost() {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="image">Image:</Label>
-              <Input
-                type="file"
-                id="image"
-                name="image"
-                // onChange={handleImageChange}
-              />
+              <button 
+              type = "button"
+              onClick={() => widgetRef.current.open()}>
+                Upload Image
+              </button>
             </FormGroup>
             {mutationError ? (
               <div>

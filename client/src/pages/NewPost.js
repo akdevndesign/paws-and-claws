@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   Form,
@@ -12,6 +12,7 @@ import {
 } from "reactstrap";
 import { CREATE_PET } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import { isConstValueNode } from "graphql";
 
 export default function NewPost() {
   const [createPet, { error }] = useMutation(CREATE_PET);
@@ -24,7 +25,26 @@ export default function NewPost() {
   const [cuddliness, setCuddliness] = useState("");
   const [friendliness, setFriendliness] = useState("");
   const [healthHistory, setHealthHistory] = useState("");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
+
+  const cloudinaryRef = useRef();
+  const widgetRef = useRef();
+  useEffect(() => {
+    cloudinaryRef.current = window.cloudinary;
+    widgetRef.current = cloudinaryRef.current.createUploadWidget(
+      {
+        cloudName: "dusaigbyn",
+        uploadPreset: "tstxkivf",
+      },
+      function (error, result) {
+        console.log("result: ", result);
+        if (!error && result && result.event === "success") {
+          setImage(result.info.secure_url);
+          console.log("result info: ", result.info.secure_url);
+        }
+      }
+    );
+  }, []);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -76,7 +96,7 @@ export default function NewPost() {
             activity_level: parseInt(activityLevel),
             cuddliness_level: parseInt(cuddliness),
             friendliness_level: parseInt(friendliness),
-            image_url: "test",
+            image_url: image,
           },
         },
       });
@@ -193,13 +213,11 @@ export default function NewPost() {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="image">Image:</Label>
-              <Input
-                type="file"
-                id="image"
-                name="image"
-                onChange={handleImageChange}
-              />
+              <button 
+              type = "button"
+              onClick={() => widgetRef.current.open()}>
+                Upload Image
+              </button>
             </FormGroup>
             {error ? (
               <div>
