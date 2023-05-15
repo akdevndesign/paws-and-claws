@@ -10,7 +10,7 @@ import Admin from "./pages/Admin";
 import NewPost from "./pages/NewPost";
 import EditPost from "./pages/EditPost";
 import { setContext } from '@apollo/client/link/context';
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet, useLocation } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import "./styles/styles.css";
 
@@ -36,12 +36,12 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const location = useLocation();
   return (
     <ApolloProvider client={client}>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="about" element={<About />} /> */}
         <Route path="contact" element={<Contact />} />
         <Route path="application/:petId" element={<Application />} />
         <Route path="petProfile/:petId" element={<PetProfile />} />
@@ -50,7 +50,7 @@ function App() {
         <Route path="newPost" element={<NewPost />} />
         <Route path="editPost/:editPetId" element={<EditPost />} />
       </Routes>
-      <About />
+      {location.pathname === "/" && <About />}
       <Outlet />
       <Footer />
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
