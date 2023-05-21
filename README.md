@@ -10,7 +10,7 @@
 - [Demo-Image](#demo-image)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Deployment](#deployment)
 - [License](#license)
 - [Contributing](#contributing)
 
@@ -27,13 +27,14 @@ Paws and Claws is a web application that uses the React JavaScript library for b
 ![image](https://github.com/akdevndesign/paws-and-claws/assets/62455130/cbfc293a-de8a-44ea-b865-0ea2b391ab8a)
 
 ---
+
 ### Features 
 
 * GraphQL
 * Express.js
 * React.js
-* Apollo
 * Bootstrap
+* Apollo
 * Bcrypt 
 * Mongoose/MongoDB
 * Cloudinary
@@ -44,20 +45,22 @@ Paws and Claws is a web application that uses the React JavaScript library for b
 ### Installation
 
 💾
-Clone this repository to your local machine
+Install dependencies with:
+
+`npm install`
+
+Requires:
+
+- `React`
+- `Bootstrap`
+- `Epress.js`
 
 ---
 
-### Usage
+### Deployment
 
 💻
-
-Install the required dependencies by running npm install in the root directory
-
-In the project directory, you can run: `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To see the deployed heroku site, click [here](https://murmuring-waters-06827.herokuapp.com/)
 
 ---
 
